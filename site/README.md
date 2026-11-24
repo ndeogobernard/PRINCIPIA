@@ -1,6 +1,7 @@
 # PRINCIPIA website
 
 A static website based on the fiberq.net mirror, with the same pages, layout and assets, rebranded to PRINCIPIA.
+
 Live site: https://ndeogobernard.github.io/PRINCIPIA/ (deployed automatically from `main` by `.github/workflows/pages.yml`).
 
 To preview locally, open `index.html` in a browser or run:
