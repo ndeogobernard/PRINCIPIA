@@ -7,13 +7,13 @@ Live site: https://ndeogobernard.github.io/PRINCIPIA/ (deployed automatically fr
 To preview locally, open `index.html` in a browser or run:
 
 ```bash
-python3 -m http.server -d site 8000
+python3 -m http.server -d site 8000   # run from the repo root
 ```
 
 ## What has been changed
 
 - The brand name "FiberQ" has been replaced with **PRINCIPIA** in all visible text, page titles and meta tags.
-- There is a new placeholder logo and favicon in `wp-content/uploads/principia/`, and the old FiberQ logo and icons have been removed.
+- The original logo and favicon are kept as they are until the new ones are ready.
 - The FiberQ domain, contact email and the original author's personal LinkedIn, GitHub, Reddit and sponsor links have been replaced with placeholders.
 - The newsletter form no longer sends signups to FiberQ's server.
 - WordPress-only head links (xmlrpc, wp-json, feeds, oEmbed) have been removed.
@@ -25,7 +25,6 @@ python3 -m http.server -d site 8000
 | `https://www.principia.example` | canonical/meta URLs, newsletter `ajax_url` | PRINCIPIA's real domain |
 | `info@principia.example` | contact `mailto:` links | PRINCIPIA's contact email |
 | `href="#"` (social / GitHub / sponsor links) | footer, hero buttons, About and Donate pages | real profile URLs, or remove them |
-| `wp-content/uploads/principia/*` | header logo, favicon | the real logo files (keep the same file names) |
 
 ## Still FiberQ content (replace before going live)
 
@@ -39,3 +38,4 @@ These all need PRINCIPIA's own content:
 - The `download/fiberq/` archive
 - Third-party links (NLnet, QGIS plugins, Autodesk Marketplace)
 - Page folder names such as `fiberq-qgis-plugin/` (renaming these means updating links)
+- Logo and favicon: `wp-content/uploads/2026/04/` (header logo) and `wp-content/uploads/2025/12/fiberq_site_icon_*` (favicon)
