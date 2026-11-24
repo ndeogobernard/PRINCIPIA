@@ -37,5 +37,5 @@ These all need PRINCIPIA's own content:
 - The contributor certificate image
 - The `download/fiberq/` archive
 - Third-party links (NLnet, QGIS plugins, Autodesk Marketplace)
-- Page folder names such as `fiberq-qgis-plugin/` (renaming these means updating links)
+- Page folders are now `about/`, `cad/`, `certification/`, `designer/`, `documentation/`, `donate/`, `nlnet/`, `privacy/`, `qgis-plugin/`, `research/`, `schematics/`
 - Logo and favicon: `wp-content/uploads/2026/04/` (header logo) and `wp-content/uploads/2025/12/fiberq_site_icon_*` (favicon)
