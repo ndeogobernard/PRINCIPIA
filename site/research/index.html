@@ -166,6 +166,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .fq-spec td, .fq-spec th { border-top: 1px solid #E3E3DF; padding: 0.65rem 0; text-align: left; vertical-align: top; }
 .fq-spec td:first-child { width: 34%; font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; color: #6B6B66; padding-right: 1.5rem; }
 .fq-spec tr:last-child td { border-bottom: 1px solid #E3E3DF; }
+.wp-block-button.is-style-outline .wp-block-button__link{background:transparent none;border:1px solid currentColor;color:currentColor;padding:calc(0.6rem - 1px) calc(1rem - 1px);}
 @media (max-width: 600px) { .fq-spec td { display: block; } .fq-spec td:first-child { width: auto; padding-right: 0; padding-bottom: 0.2rem; } .fq-spec td + td { border-top: 0; padding-top: 0; } .fq-spec tr:last-child td:first-child { border-bottom: 0; } }
 
 /* 6. Buttons: one primary, everything else is a link. */
@@ -271,7 +272,7 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 							<div class="wp-block-navigation__responsive-container-content" 
 				data-wp-watch="callbacks.focusFirstElement"
 			 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--pointerenter="actions.openMenuOnHover" data-wp-on--pointerleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="../index.html#products"><span class="wp-block-navigation-item__label">Products</span></a><button data-wp-bind--aria-expanded="state.isSubmenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Products submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../qgis-plugin/index.html"><span class="wp-block-navigation-item__label">OpenFiberPlus</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../schematics/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Convert</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../cad/index.html"><span class="wp-block-navigation-item__label">Civil Intel</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../designer/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Connect</span></a></li></ul></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../research/index.html" aria-current="page"><span class="wp-block-navigation-item__label">Research</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../documentation/index.html"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../nlnet/index.html"><span class="wp-block-navigation-item__label">NLnet</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../donate/index.html"><span class="wp-block-navigation-item__label">Donate</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../about/index.html"><span class="wp-block-navigation-item__label">About</span></a></li></ul>
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--pointerenter="actions.openMenuOnHover" data-wp-on--pointerleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="../index.html#products"><span class="wp-block-navigation-item__label">Products</span></a><button data-wp-bind--aria-expanded="state.isSubmenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Products submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../openfiberplus/index.html"><span class="wp-block-navigation-item__label">OpenFiberPlus</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../civil-intel/index.html"><span class="wp-block-navigation-item__label">Civil Intel</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../connect/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Connect</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../convert/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Convert</span></a></li></ul></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../industries/index.html"><span class="wp-block-navigation-item__label">Industries</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../services/index.html"><span class="wp-block-navigation-item__label">Services</span></a></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../research/index.html" aria-current="page"><span class="wp-block-navigation-item__label">Research</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../documentation/index.html"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../about/index.html"><span class="wp-block-navigation-item__label">About</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../contact/index.html"><span class="wp-block-navigation-item__label">Contact</span></a></li></ul>
 								
 							</div>
 						</div>
@@ -288,198 +289,63 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 <main id="wp--skip-link--target" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="margin-top:0">
 	<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-
-<p class="fq-label wp-block-paragraph">RESEARCH &nbsp;/&nbsp; PAPERS AND TALKS</p>
-
+<p class="fq-label wp-block-paragraph">RESEARCH</p>
 <hr class="fq-rule-strong" />
-
 <div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"></div>
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h1 class="wp-block-heading">Research</h1>
-
-
+<h1 class="wp-block-heading">Applied research in engineering interoperability</h1>
 <div style="height:0.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<p class="has-medium-font-size wp-block-paragraph">Papers and talks behind the PRINCIPIA tools: how fiber network designs keep their structure when they move between CAD, GIS and OSS.</p>
-
+<p class="has-medium-font-size wp-block-paragraph">PRINCIPIA's products are grounded in applied research: methods for moving engineering data between tools without losing structure, accuracy or meaning.</p>
 </div>
-
 </div>
-
-</div>
-
-
 <div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-
-<p class="fq-label wp-block-paragraph">01<br />TELFOR 2026</p>
-
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">01<br />FOCUS AREAS</p>
 </div>
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h2 class="wp-block-heading">Recovering Connectivity from Geometry-Only CAD Interchange</h2>
-
-
-<p class="has-medium-font-size wp-block-paragraph">A Derivable Spacing Bound for Fiber Outside-Plant Round-Trip</p>
-
-
-<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<table class="fq-spec"><tbody><tr><td>CONFERENCE</td><td>TELFOR 2026, Belgrade, Serbia</td></tr><tr><td>SESSION</td><td>Software Tools and Applications</td></tr><tr><td>PAPER</td><td>6672</td></tr><tr><td>AUTHOR</td><td>Vladimir Vukovi&#263;, PRINCIPIA</td></tr><tr><td>STATUS</td><td>Accepted paper</td></tr><tr><td>FULL TEXT</td><td>Linked here when the proceedings are published</td></tr></tbody></table>
-
-
+<h2 class="wp-block-heading">Research topics</h2>
+<table class="fq-spec"><tbody><tr><td>CAD&ndash;GIS INTEROPERABILITY</td><td>Moving design data between CAD and GIS while preserving geometry, attributes and connectivity.</td></tr><tr><td>STRUCTURE RECOVERY</td><td>Recovering connectivity and engineering intent from drawings that contain geometry only.</td></tr><tr><td>OPEN DATA MODELS</td><td>Vendor-neutral models and interchange formats for infrastructure networks.</td></tr><tr><td>COORDINATE SYSTEMS</td><td>Reliable handling of projections and spatial references across applications.</td></tr><tr><td>DESIGN WORKFLOWS</td><td>How engineering teams actually use design tools, and where software can save time.</td></tr></tbody></table>
+</div>
+</div>
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">02<br />PUBLICATIONS</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Papers and talks</h2>
+<p class="wp-block-paragraph">Publications, conference papers and talks will be listed here as they are released.</p>
+</div>
+</div>
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">03<br />COLLABORATE</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Research partnerships</h2>
+<p class="wp-block-paragraph">PRINCIPIA welcomes collaboration with universities, research groups and industry partners working on infrastructure data, interoperability and open standards.</p>
 <div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<h3 class="wp-block-heading">Abstract</h3>
-
-
-<p class="wp-block-paragraph">The Drawing Exchange Format (DXF), widely used to exchange outside-plant (OSP) fiber network drawings, keeps geometry but discards connectivity. This paper presents an OSP schema carried in DXF extended entity data (XDATA) and layer names, and a bounding-box endpoint-matching procedure that recovers connectivity from geometry alone. A proposition derived from the matching rule yields a tight spacing bound, set by the node footprint alone, above which recovery is exact under every scan order; randomized adversarial placements and real symbol footprints confirm it. The round trip is native: third-party dialects are imported but not re-emitted, and the method is not a general DXF translator.</p>
-
-</div>
-
-</div>
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-
-<p class="fq-label wp-block-paragraph">02<br />IN PREPARATION</p>
-
-</div>
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h2 class="wp-block-heading">A Canonical Intermediate Model for fiber network interchange</h2>
-
-
-<p class="wp-block-paragraph">Working title: <em>Canonical Intermediate Model for Loss-Aware Interchange of Fiber Network Designs Across CAD, GIS and OSS Platforms</em>.</p>
-
-
-<p class="wp-block-paragraph">Instead of a separate converter between every pair of applications, one Canonical Intermediate Model sits in the middle, with an import and an export adapter for each format. A fidelity report records what each conversion preserved, transformed, reconstructed, approximated or lost.</p>
-
-
-<table class="fq-spec"><tbody><tr><td>SOURCE</td><td>CAD, GIS, OSS and database systems</td></tr><tr><td>IMPORT</td><td>Source-specific adapter</td></tr><tr><td>CORE</td><td>Canonical Intermediate Model</td></tr><tr><td>EXPORT</td><td>Destination-specific adapter</td></tr><tr><td>OUTPUT</td><td>Converted network data and a fidelity report</td></tr></tbody></table>
-
-</div>
-
-</div>
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-
-<p class="fq-label wp-block-paragraph">03<br />TALKS</p>
-
-</div>
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h2 class="wp-block-heading">Talks</h2>
-
-
-<p class="wp-block-paragraph"><strong>RIPE SEE 14, April 2026.</strong> The Documentation Trap: Turning Fibre Maps into Operational Data (Lessons from QGIS and PRINCIPIA Workflows).</p>
-
-
-<p class="wp-block-paragraph"><a href="https://pretalx.ripe.net/see-14/talk/8JWQ7T/">View conference presentation &rarr;</a></p>
-
-</div>
-
-</div>
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-
-<p class="fq-label wp-block-paragraph">04<br />RELATED</p>
-
-</div>
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h2 class="wp-block-heading">Related work</h2>
-
-
-<p class="wp-block-paragraph"><a href="#">The PRINCIPIA interchange format specification &rarr;</a></p>
-
-
-<p class="wp-block-paragraph"><a href="../nlnet/index.html">The NLnet grant behind the PRINCIPIA QGIS plugin &rarr;</a></p>
-
-
-<p class="wp-block-paragraph"><a href="../about/index.html">About the author &rarr;</a></p>
-
-</div>
-
-</div>
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-
-<p class="fq-label wp-block-paragraph">05<br />UPDATES</p>
-
-</div>
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-
-<h2 class="wp-block-heading">Get PRINCIPIA updates</h2>
-
-
-<p class="wp-block-paragraph">Release notes, tutorials, new features and research news. No spam.</p>
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="../research/index.html#popmake-204">Sign up</a></div>
-
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:info@principia.example?subject=Research%20collaboration">Get in touch</a></div>
 </div>
-
 </div>
-
 </div>
-
-
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">04<br />UPDATES</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Get PRINCIPIA updates</h2>
+<p class="wp-block-paragraph">Product releases, technical notes and new integrations, a few times a year. No spam.</p>
+<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="../index.html#popmake-204">Sign up</a></div>
+</div>
+</div>
+</div>
 <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
+</div>
 </div>
 </main>
 
@@ -509,19 +375,19 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-bce0c455 wp-block-group-is-layout-flex">
-<p class="has-small-font-size wp-block-paragraph"><a href="../qgis-plugin/index.html">OpenFiberPlus</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../openfiberplus/index.html">OpenFiberPlus</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../schematics/index.html">PRINCIPIA Convert</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../civil-intel/index.html">Civil Intel</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../cad/index.html">Civil Intel</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../connect/index.html">PRINCIPIA Connect</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../designer/index.html">PRINCIPIA Connect</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../convert/index.html">PRINCIPIA Convert</a></p>
 </div>
 </div>
 
@@ -533,6 +399,14 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-bce0c455 wp-block-group-is-layout-flex">
+<p class="has-small-font-size wp-block-paragraph"><a href="../industries/index.html">Industries</a></p>
+
+
+
+<p class="has-small-font-size wp-block-paragraph"><a href="../services/index.html">Services</a></p>
+
+
+
 <p class="has-small-font-size wp-block-paragraph"><a href="../research/index.html">Research</a></p>
 
 
@@ -541,11 +415,11 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../nlnet/index.html">NLnet</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../open-source/index.html">Open Source</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../donate/index.html">Donate</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../support/index.html">Support</a></p>
 
 
 
@@ -553,7 +427,7 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../certification/index.html">Certificate</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../contact/index.html">Contact</a></p>
 
 
 

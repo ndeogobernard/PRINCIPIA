@@ -151,6 +151,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 .fq-spec td, .fq-spec th { border-top: 1px solid #E3E3DF; padding: 0.65rem 0; text-align: left; vertical-align: top; }
 .fq-spec td:first-child { width: 34%; font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.8rem; color: #6B6B66; padding-right: 1.5rem; }
 .fq-spec tr:last-child td { border-bottom: 1px solid #E3E3DF; }
+.wp-block-button.is-style-outline .wp-block-button__link{background:transparent none;border:1px solid currentColor;color:currentColor;padding:calc(0.6rem - 1px) calc(1rem - 1px);}
 @media (max-width: 600px) { .fq-spec td { display: block; } .fq-spec td:first-child { width: auto; padding-right: 0; padding-bottom: 0.2rem; } .fq-spec td + td { border-top: 0; padding-top: 0; } .fq-spec tr:last-child td:first-child { border-bottom: 0; } }
 
 /* 6. Buttons: one primary, everything else is a link. */
@@ -281,7 +282,7 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 							<div class="wp-block-navigation__responsive-container-content" 
 				data-wp-watch="callbacks.focusFirstElement"
 			 id="modal-1-content">
-								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--pointerenter="actions.openMenuOnHover" data-wp-on--pointerleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="../index.html#products"><span class="wp-block-navigation-item__label">Products</span></a><button data-wp-bind--aria-expanded="state.isSubmenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Products submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../qgis-plugin/index.html"><span class="wp-block-navigation-item__label">OpenFiberPlus</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../schematics/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Convert</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../cad/index.html"><span class="wp-block-navigation-item__label">Civil Intel</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../designer/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Connect</span></a></li></ul></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../research/index.html"><span class="wp-block-navigation-item__label">Research</span></a></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../documentation/index.html" aria-current="page"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../nlnet/index.html"><span class="wp-block-navigation-item__label">NLnet</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../donate/index.html"><span class="wp-block-navigation-item__label">Donate</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../about/index.html"><span class="wp-block-navigation-item__label">About</span></a></li></ul>
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--pointerenter="actions.openMenuOnHover" data-wp-on--pointerleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-navigation-item has-child open-on-hover-click wp-block-navigation-submenu"><a class="wp-block-navigation-item__content" href="../index.html#products"><span class="wp-block-navigation-item__label">Products</span></a><button data-wp-bind--aria-expanded="state.isSubmenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Products submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true" focusable="false"><path d="M1.50002 4L6.00002 8L10.5 4" stroke-width="1.5"></path></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container wp-block-navigation-submenu"><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../openfiberplus/index.html"><span class="wp-block-navigation-item__label">OpenFiberPlus</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../civil-intel/index.html"><span class="wp-block-navigation-item__label">Civil Intel</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../connect/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Connect</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../convert/index.html"><span class="wp-block-navigation-item__label">PRINCIPIA Convert</span></a></li></ul></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../industries/index.html"><span class="wp-block-navigation-item__label">Industries</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../services/index.html"><span class="wp-block-navigation-item__label">Services</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../research/index.html"><span class="wp-block-navigation-item__label">Research</span></a></li><li class="wp-block-navigation-item current-menu-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../documentation/index.html" aria-current="page"><span class="wp-block-navigation-item__label">Documentation</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../about/index.html"><span class="wp-block-navigation-item__label">About</span></a></li><li class="wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="../contact/index.html"><span class="wp-block-navigation-item__label">Contact</span></a></li></ul>
 								
 							</div>
 						</div>
@@ -298,744 +299,100 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 <main id="wp--skip-link--target" class="wp-block-group is-layout-flow wp-block-group-is-layout-flow" style="margin-top:0">
 	<div class="entry-content wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
 <div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
-<p class="fq-label wp-block-paragraph">DOCUMENTATION &nbsp;/&nbsp; PRINCIPIA FOR QGIS &nbsp;/&nbsp; FREE, NO REGISTRATION</p>
-
-
-
+<p class="fq-label wp-block-paragraph">DOCUMENTATION</p>
 <hr class="fq-rule-strong" />
-
-
-
 <div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"></div>
-
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
 <h1 class="wp-block-heading">PRINCIPIA documentation</h1>
-
-
-
 <div style="height:0.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="has-medium-font-size wp-block-paragraph">Guides, workflows, tutorials and setup resources for designing, validating and exporting fiber networks with PRINCIPIA inside QGIS. Every document is a direct download. No registration, no login, no paywall.</p>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="../wp-content/uploads/2026/01/principia_User_Guide_Template_JG_v2.0-1.pdf">Open User Guide</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--2"><a class="wp-block-button__link wp-element-button" href="../documentation/index.html#release-documentation">Release guides</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--3"><a class="wp-block-button__link wp-element-button" href="../documentation/index.html#support-community">Support</a></div>
+<p class="has-medium-font-size wp-block-paragraph">Guides, references and release notes for PRINCIPIA products.</p>
 </div>
 </div>
-</div>
-</div>
-
-
-
-<div style="height:4rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">01<br>START HERE</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 class="wp-block-heading">Four ways in</h2>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:13rem">
-<h3 class="wp-block-heading">New to PRINCIPIA?</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Begin with the main User Guide to install the plugin, open the toolbar and understand the basic project structure. <a href="../wp-content/uploads/2026/01/principia_User_Guide_Template_JG_v2.0-1.pdf">Read the User Guide</a>.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:13rem">
-<h3 class="wp-block-heading">Building a full GPON / FTTH workflow?</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Use the end-to-end workflow guide for a complete planning sequence from project setup to deliverables. <a href="../wp-content/uploads/2026/08/principia_GPON_FTTH_End_to_End_Workflow_Guide_v1.0.pdf">Open the Workflow Guide</a>.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:13rem">
-<h3 class="wp-block-heading">Checking a design before handover?</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">The validation guide covers running the fourteen checks, reading the results panel and exporting an audit-ready report. <a href="../wp-content/uploads/2026/08/principia-Validation-Guide.pdf">Open the Validation Guide</a>.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:13rem">
-<h3 class="wp-block-heading">Handing the design to another tool?</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">The interchange guide covers exporting a bundle, what it carries that a plain export drops, importing one back, and what happens to data PRINCIPIA cannot model. <a href="../wp-content/uploads/2026/09/principia-Interchange-Guide.pdf">Open the Interchange Guide</a>.</p>
-</div>
-</div>
-
-
-
-<hr class="fq-rule" />
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:13rem">
-<h3 class="wp-block-heading">Need terrain-aware route and cable analysis?</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Use the DEM-based QGIS scripts to calculate terrain-adjusted route lengths, generate elevation profiles, and verify PRINCIPIA cable lengths including optical slack/reserve values. The scripts can be used with PRINCIPIA routes, aerial or underground cables, and standard QGIS line features. <a href="../wp-content/uploads/2026/10/principia_QGIS_Terrain_Testing_Guides_EN.pdf" target="_blank" rel="noopener">Terrain route and cable analysis guide</a>.</p>
-</div>
-</div>
-
-
-
-<hr class="fq-rule" />
-</div>
-</div>
-
-
-
 <div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
 <div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">02<br>RELEASES</p>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">01<br />PRODUCTS</p>
 </div>
-
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 id="release-documentation" class="wp-block-heading">Release documentation</h2>
-
-
-
-<p class="wp-block-paragraph">Versioned guides published with each plugin release, newest first.</p>
-
-
-
-<div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<hr class="fq-rule-strong" />
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="fq-label wp-block-paragraph">SEPTEMBER 2026 &nbsp;/&nbsp; v1.5.0 &nbsp;/&nbsp; CURRENT</p>
-
-
-
-<h3 class="wp-block-heading">An open interchange format</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">A slack loop belongs to a <em>particular</em> cable; a cable passes <em>through</em> particular manholes, in order; cables are grouped into named routes. An ordinary GeoPackage export drops all of that, because those relationships live in identifiers local to one QGIS project. <strong>Export interchange bundle</strong> carries them, keyed by an identity that survives the trip, and <strong>Import interchange bundle</strong> reads them back. Anything PRINCIPIA has no model for is carried through unchanged rather than dropped or reclassified.</p>
-
-
-
-<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>INTERCHANGE USER GUIDE</td><td>PDF, 5&nbsp;pp. Exporting a bundle, what is in one, importing, the GeoJSON profile, older projects. <a href="../wp-content/uploads/2026/09/principia-Interchange-Guide.pdf">Open</a></td></tr><tr><td>FORMAT SPECIFICATION</td><td>PDF, 10&nbsp;pp. Container, identity, the relational side-car, metadata, versioning and a conformance checklist. CC-BY-4.0, so any tool can implement it. <a href="../wp-content/uploads/2026/09/principia-Interchange-Format-Specification.pdf">Open</a></td></tr><tr><td>FIELD MAPPING</td><td>PDF, 9&nbsp;pp. Every stored field and value with its canonical name. Generated from the code, so it cannot drift. <a href="../wp-content/uploads/2026/09/principia-Interchange-Field-Mapping.pdf">Open</a></td></tr></tbody></table>
-
-
-
-<div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<hr class="fq-rule" />
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="fq-label wp-block-paragraph">AUGUST 2026 &nbsp;/&nbsp; v1.4.0</p>
-
-
-
-<h3 class="wp-block-heading">Project validation and reporting</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph"><strong>Validate project</strong> runs fourteen checks over the whole design: topology and connectivity, referential integrity, feature identity, required attributes, value domains, length coherence, CRS consistency and geometry health. Results land in a dockable panel you can filter, click through, and export as a report.</p>
-
-
-
-<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>VALIDATION USER GUIDE</td><td>PDF, 7&nbsp;pp. Running a validation, reading the panel, repairing stored lengths. <a href="../wp-content/uploads/2026/08/principia-Validation-Guide.pdf">Open</a></td></tr><tr><td>RULES REFERENCE</td><td>PDF, 7&nbsp;pp. Every rule: what it checks, why it matters, what to do. <a href="../wp-content/uploads/2026/08/principia-Validation-Rules-Reference.pdf">Open</a></td></tr><tr><td>DEMO AND SAMPLE</td><td>A small design with deliberate faults, and the report it produces. <a href="../wp-content/uploads/2026/08/principia-Sample-Validation-Report.pdf">View report</a> &middot; <a href="#">Open project</a></td></tr></tbody></table>
-
-
-
-<div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<hr class="fq-rule" />
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="fq-label wp-block-paragraph">JULY 2026 &nbsp;/&nbsp; v1.3.0</p>
-
-
-
-<h3 class="wp-block-heading">Data model and project migrations</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Every project carries a schema-version marker, older projects upgrade automatically and losslessly when you open them, and every feature carries a stable cross-system identity (<code>fiberq_uuid</code>) that survives edits, exports and round-trips.</p>
-
-
-
-<div style="height:1rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>VERSIONING GUIDE</td><td>PDF, 3&nbsp;pp. What happens when you open an older project. <a href="../wp-content/uploads/2026/07/principia-Project-Versioning-Guide.pdf">Open</a></td></tr><tr><td>SCHEMA REFERENCE</td><td>PDF, 9&nbsp;pp. Every layer type, field, type, unit and value domain. <a href="../wp-content/uploads/2026/07/principia-Schema-Reference.pdf">Open</a></td></tr></tbody></table>
-
-
-
-<div style="height:1.4rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Full release history, changelogs and funding details: <a href="../nlnet/index.html">PRINCIPIA releases and downloads</a> · <a href="https://plugins.qgis.org/plugins/fiberq/">QGIS plugin page</a> · <a href="#">GitHub repository</a></p>
-</div>
-</div>
-
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">03<br>LIBRARY</p>
-</div>
-
-
-
+<h2 class="wp-block-heading">Product documentation</h2>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3a88641f wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 class="wp-block-heading">Documentation library</h2>
-
-
-
-<p class="wp-block-paragraph">Core downloads and setup resources in one place.</p>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>USER GUIDE</td><td><a href="../wp-content/uploads/2026/01/principia_User_Guide_Template_JG_v2.0-1.pdf">PRINCIPIA User Guide</a></td></tr><tr><td>WORKFLOW</td><td><a href="../wp-content/uploads/2026/08/principia_GPON_FTTH_End_to_End_Workflow_Guide_v1.0.pdf">GPON / FTTH end-to-end workflow guide</a></td></tr><tr><td>MANHOLES</td><td><a href="../wp-content/uploads/2026/02/principia_Manholes_User_Guide.pdf">Manholes user guide</a></td></tr><tr><td>DATABASE</td><td><a href="../wp-content/uploads/2026/02/principia_pgAdmin4_User_Guide.pdf">pgAdmin4 / database setup guide</a></td></tr><tr><td>INTERCHANGE</td><td><a href="../wp-content/uploads/2026/09/principia-Interchange-Guide.pdf">Moving a design between tools</a> &middot; <a href="../wp-content/uploads/2026/09/principia-Interchange-Format-Specification.pdf">format specification</a> &middot; <a href="../wp-content/uploads/2026/09/principia-Interchange-Field-Mapping.pdf">field mapping</a></td></tr><tr><td>PER RELEASE</td><td><a href="../documentation/index.html#release-documentation">Interchange, validation, schema and migration guides</a></td></tr></tbody></table>
-
-
-
-<div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h3 class="wp-block-heading">Tools and access</h3>
-
-
-
+<hr class="fq-rule" />
 <div style="height:0.8rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>PREVIEW MAP</td><td><a href="mailto:info@principia.example?subject=PRINCIPIA%20Access%20Request%20%E2%80%93%20MAPPROXY%20Folder%20%2B%20Preview%20Map%20Key%20%2B%20Publish%20to%20PostGIS">Request an activation key and the MapProxy folder</a></td></tr><tr><td>MANHOLE FORM</td><td><a href="https://drive.google.com/file/d/1rnlOtQcqTqKRS9B0o2qMqNuGJBeFeCAy/view?usp=sharing">Manhole UI form</a></td></tr><tr><td>DOCKER</td><td><a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a></td></tr><tr><td>QGIS BASICS</td><td><a href="https://www.qgistutorials.com/sr/">QGIS Tutorials</a></td></tr></tbody></table>
-
-
-
-<div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h3 class="wp-block-heading">Video</h3>
-
-
-
-<div style="height:0.8rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-style-outline is-style-outline--4"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/@fiberq/videos">PRINCIPIA YouTube channel</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--5"><a class="wp-block-button__link wp-element-button" href="https://www.youtube.com/watch?v=8ZPGc0IgGCk">Joe Godby tutorials</a></div>
+<p class="fq-label wp-block-paragraph">OPEN SOURCE</p>
+<h3 class="wp-block-heading">OpenFiberPlus</h3>
+<p class="wp-block-paragraph">Installation, network design, validation and documentation workflows.</p>
+<p class="wp-block-paragraph"><a href="../openfiberplus/index.html">OpenFiberPlus &rarr;</a></p>
 </div>
-</div>
-</div>
-
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">04<br>QUICKSTART</p>
-</div>
-
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 class="wp-block-heading">A practical end-to-end workflow</h2>
-
-
-
-<p class="wp-block-paragraph">Follow this in QGIS with the plugin installed.</p>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">01</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Create a project</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Create a project using GeoPackage or PostGIS as the main data store.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">02</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Draw routes and place elements</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Digitise routes and place poles, manholes, ducts, closures, cabinets and other network objects.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">03</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Generate network outputs</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Generate cables, reserves, splices and connections based on the design structure.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">04</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Validate and review</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Run <strong>Validate project</strong> to check connectivity, references, attributes, lengths and geometry across the whole design, then export the results as HTML, JSON or CSV for the handover file.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">05</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Export or publish deliverables</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Export layers as GeoPackage or KML/KMZ, or publish results to PostGIS for collaboration.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">06</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Import existing points and lines</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Bring existing GIS data into PRINCIPIA layers to avoid redrawing and keep projects consistent.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3021c55d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:0.9rem;padding-bottom:0.9rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:2.5rem">
-<p class="fq-label wp-block-paragraph">07</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h3 class="wp-block-heading">Move the design between tools</h3>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Run <strong>Export interchange bundle</strong> for a handover that keeps the relationships, or <strong>Import interchange bundle</strong> to read one back. Importing the same bundle twice changes nothing.</p>
-</div>
-</div>
-
-
-
 <hr class="fq-rule" />
-</div>
-</div>
-
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">05<br>SETUP</p>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 class="wp-block-heading">Installation and Preview Map</h2>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h3 class="wp-block-heading">Installing the plugin</h3>
-
-
-
-<div style="height:0.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>01</td><td>Install from QGIS &rarr; Plugins &rarr; Manage and Install Plugins</td></tr><tr><td>02</td><td>Search for PRINCIPIA, install it and open the toolbar</td></tr><tr><td>03</td><td>Check styles, icons and default project setup</td></tr></tbody></table>
-
-
-
-<div style="height:1.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<h3 class="wp-block-heading">Setting up Preview Map</h3>
-
-
-
-<div style="height:0.6rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<p class="has-small-font-size wp-block-paragraph">Deploy the PRINCIPIA Preview Map stack on a server and connect users through PostGIS credentials, so the team works from one shared, up-to-date dataset in the browser.</p>
-
-
-
 <div style="height:0.8rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<table class="fq-spec"><tbody><tr><td>01</td><td>Activate Preview Map with a key</td></tr><tr><td>02</td><td>Download the MapProxy folder</td></tr><tr><td>03</td><td>Install Docker and run the setup</td></tr><tr><td>04</td><td>Connect PostGIS with pgAdmin4</td></tr><tr><td>05</td><td>Export built-in Preview Map layers to the main project</td></tr><tr><td>06</td><td>Add or remove elements from Preview Map layers in the working project</td></tr><tr><td>07</td><td>Keep shared layers synchronised as changes are made</td></tr></tbody></table>
+<p class="fq-label wp-block-paragraph">SUITE</p>
+<h3 class="wp-block-heading">Civil Intel</h3>
+<p class="wp-block-paragraph">Getting started, supported data and interoperability workflows.</p>
+<p class="wp-block-paragraph"><a href="../civil-intel/index.html">Civil Intel &rarr;</a></p>
 </div>
 </div>
-
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">06<br>TROUBLESHOOTING</p>
-</div>
-
-
-
+<div style="height:1.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-3a88641f wp-block-columns-is-layout-flex">
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 class="wp-block-heading">When something looks wrong</h2>
-
-
-
-<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">Styles or icons missing after export</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Reload styles and confirm the plugin SVG path is available in QGIS.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">Layers not visible in Preview Map</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Verify the project source (GeoPackage or PostGIS) and refresh the map.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">PostGIS publish not showing updates</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Confirm table name, SRID and permissions match the database setup.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">Slow performance while editing</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Reduce snapping complexity and avoid very heavy background layers.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">Stored lengths look too long</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Projects made before v1.4.0 stored route and cable lengths in map units, which in Web Mercator is inflated by about 41% at Serbian latitudes. Run <strong>Plugins → PRINCIPIA → Recalculate lengths</strong>. It shows every change before writing anything.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">A project opened in an older QGIS lost its CRS</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">QGIS 4 stores project properties in a form QGIS 3 cannot read. Set the CRS again in <strong>Project → Properties → CRS</strong> before drawing. Validation reports this as rule E1.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">A GeoPackage from another tool will not import</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph"><strong>Import interchange bundle</strong> reads bundles, not any GeoPackage: a plain file has no <code>_fiberq_metadata</code> table, and guessing which column is a cable diameter and which is a pole height would produce a plausible, wrong network. Add the file the ordinary way (<strong>Layer → Add Layer → Add Vector Layer</strong>) and rename each layer to a PRINCIPIA layer name — it then exports as that type.</p>
-</div>
-</div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-59e3c01d wp-block-columns-is-layout-flex" style="border-top-color:#E3E3DF;border-top-width:1px;padding-top:1.05rem;padding-bottom:1.05rem">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:15rem">
-<h3 class="wp-block-heading">Validation reports nothing at all</h3>
-</div>
-
-
-
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<p class="has-small-font-size wp-block-paragraph">Check the summary line. “No issues, 14 rules over 15 layers” is a clean project. A C2 warning means the project contains no PRINCIPIA layers, so there was nothing to check.</p>
-</div>
-</div>
-
-
-
 <hr class="fq-rule" />
+<div style="height:0.8rem" aria-hidden="true" class="wp-block-spacer"></div>
+<p class="fq-label wp-block-paragraph">IN DEVELOPMENT</p>
+<h3 class="wp-block-heading">PRINCIPIA Connect</h3>
+<p class="wp-block-paragraph">Documentation will be published with the first release.</p>
+<p class="wp-block-paragraph"><a href="../connect/index.html">PRINCIPIA Connect &rarr;</a></p>
 </div>
-</div>
-
-
-
-<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
-<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
-<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem">
-<p class="fq-label wp-block-paragraph">07<br>SUPPORT</p>
-</div>
-
-
-
 <div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
-<h2 id="support-community" class="wp-block-heading">Support and community</h2>
-
-
-
-<p class="wp-block-paragraph">PRINCIPIA is community-driven. Bugs, ideas, discussions and contributions are welcome.</p>
-
-
-
+<hr class="fq-rule" />
+<div style="height:0.8rem" aria-hidden="true" class="wp-block-spacer"></div>
+<p class="fq-label wp-block-paragraph">IN DEVELOPMENT</p>
+<h3 class="wp-block-heading">PRINCIPIA Convert</h3>
+<p class="wp-block-paragraph">Documentation will be published with the first release.</p>
+<p class="wp-block-paragraph"><a href="../convert/index.html">PRINCIPIA Convert &rarr;</a></p>
+</div>
+</div>
+</div>
+</div>
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">02<br />LIBRARY</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">What the library will include</h2>
+<table class="fq-spec"><tbody><tr><td>GETTING STARTED</td><td>Installation, requirements and first steps for each product.</td></tr><tr><td>USER GUIDES</td><td>Step-by-step workflows for common design tasks.</td></tr><tr><td>DATA &amp; FORMATS</td><td>Supported formats, data models and coordinate system handling.</td></tr><tr><td>RELEASE NOTES</td><td>Changes, fixes and compatibility for each release.</td></tr><tr><td>TROUBLESHOOTING</td><td>Common issues and how to resolve them.</td></tr></tbody></table>
+</div>
+</div>
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">03<br />SUPPORT</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Need help?</h2>
+<p class="wp-block-paragraph">Questions about a product or a workflow that is not covered yet are welcome.</p>
 <div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
-
-
-
 <div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-style-outline is-style-outline--6"><a class="wp-block-button__link wp-element-button" href="#">GitHub Issues</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--7"><a class="wp-block-button__link wp-element-button" href="#">GitHub Discussions</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--8"><a class="wp-block-button__link wp-element-button" href="#">Sponsor on GitHub</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="mailto:info@principia.example?subject=Support">Contact support</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Report a bug</a></div>
 </div>
 </div>
 </div>
-
-
-
+<div style="height:3.5rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-dc8a71de wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:8rem"><p class="fq-label wp-block-paragraph">04<br />UPDATES</p>
+</div>
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<h2 class="wp-block-heading">Get PRINCIPIA updates</h2>
+<p class="wp-block-paragraph">Product releases, technical notes and new integrations, a few times a year. No spam.</p>
+<div style="height:1.2rem" aria-hidden="true" class="wp-block-spacer"></div>
+<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="../index.html#popmake-204">Sign up</a></div>
+</div>
+</div>
+</div>
 <div style="height:2rem" aria-hidden="true" class="wp-block-spacer"></div>
+</div>
 </div>
 </main>
 
@@ -1065,19 +422,19 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-bce0c455 wp-block-group-is-layout-flex">
-<p class="has-small-font-size wp-block-paragraph"><a href="../qgis-plugin/index.html">OpenFiberPlus</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../openfiberplus/index.html">OpenFiberPlus</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../schematics/index.html">PRINCIPIA Convert</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../civil-intel/index.html">Civil Intel</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../cad/index.html">Civil Intel</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../connect/index.html">PRINCIPIA Connect</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../designer/index.html">PRINCIPIA Connect</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../convert/index.html">PRINCIPIA Convert</a></p>
 </div>
 </div>
 
@@ -1089,6 +446,14 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 <div class="wp-block-group is-vertical is-layout-flex wp-container-core-group-is-layout-bce0c455 wp-block-group-is-layout-flex">
+<p class="has-small-font-size wp-block-paragraph"><a href="../industries/index.html">Industries</a></p>
+
+
+
+<p class="has-small-font-size wp-block-paragraph"><a href="../services/index.html">Services</a></p>
+
+
+
 <p class="has-small-font-size wp-block-paragraph"><a href="../research/index.html">Research</a></p>
 
 
@@ -1097,11 +462,11 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../nlnet/index.html">NLnet</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../open-source/index.html">Open Source</a></p>
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../donate/index.html">Donate</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../support/index.html">Support</a></p>
 
 
 
@@ -1109,7 +474,7 @@ var ajax_sib_front_object = {"ajax_url":"https://www.principia.example/wp-admin/
 
 
 
-<p class="has-small-font-size wp-block-paragraph"><a href="../certification/index.html">Certificate</a></p>
+<p class="has-small-font-size wp-block-paragraph"><a href="../contact/index.html">Contact</a></p>
 
 
 
