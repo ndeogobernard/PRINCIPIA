@@ -35,7 +35,6 @@ python3 -m http.server -d site 8000
 | `info@principia.example` | the real contact email |
 | `https://www.principia.example` | the real domain (used in meta tags and the newsletter form) |
 | `href="#"` links | GitHub, LinkedIn, bug reports, "Get OpenFiberPlus", "Become a sponsor" |
-| Logo and favicon | `wp-content/uploads/2026/04/` (header logo) and `wp-content/uploads/2025/12/principia_site_icon_*` (favicon); keep the same file names |
 
 ## Still to do
 
@@ -59,20 +58,13 @@ These came from the original site. No page links to them yet; they are kept so t
 
 Their contents still show the original FiberQ material until they are reworked.
 
-## Design system
+## Brand and design system
 
-The styles live in `site/wp-content/themes/principia/principia.css`, and the motion script in `principia.js`. Every page loads both after the WordPress styles. Change a design token there and it applies across the whole site.
-
-| Token | Value |
-|---|---|
-| Typeface | DM Sans (self-hosted, SIL Open Font License); labels use IBM Plex Mono |
-| Text colours | ink `#23233c`, secondary `#5f6575` |
-| Accents | blue `#0077ff` (links), `#006fee` (buttons), green `#00e89d` (highlight) |
-| Surfaces | white, light grey `#f2f2f2` (cards, footer), navy `#061e4d` and `#050f1e` (dark panels) |
-| Type scale | H1 up to 72px, H2 up to 50px, H3 24px, body 16px/24px; tight negative letter-spacing on headings |
-| Labels | 12px mono uppercase with 0.1em letter-spacing |
-| Radii | 16px cards, 20px panels, full-pill buttons |
-| Shadows | none (flat surfaces, hairline dividers) |
-| Buttons | blue pill (primary), ink-outline pill (secondary), slight scale on hover |
-| Links | blue; underline slides in on hover |
-| Motion | sections fade and rise on scroll (0.6–0.8s, `cubic-bezier(.17,.17,.34,1)`); turned off for visitors who prefer reduced motion |
+- **Brand kit:** `brand/` holds the guidelines PDF, logos, app icon and favicon, colours and fonts. Treat it as read-only source material.
+- **Design system:** `design-system/DESIGN_SYSTEM.md` (v2.0.0) applies the brand. `tokens.json` is the source of truth; `tokens.css` and `tailwind.preset.js` are generated from it.
+- **How the site uses them:**
+  - `site/wp-content/themes/principia/tokens.css` is a copy of `design-system/tokens.css`. The deploy workflow refreshes it automatically; for local previews, copy it again after rebuilding the tokens.
+  - `principia.css` (same folder) styles the site using only token variables. `principia.js` adds the scroll reveal and the header shadow.
+  - Fonts: Space Grotesk and Inter as WOFF2 in `site/wp-content/themes/principia/fonts/`, converted from `brand/04-Fonts/`.
+  - Logo: `site/wp-content/themes/principia/brand/PRINCIPIA-logo-*.svg`, copied from `brand/01-Logo/Primary-Logo/SVG/`.
+  - Favicon and app icons: `favicon.ico`, `favicon.svg`, `apple-touch-icon.png`, `icon-192.png`, `icon-512.png` and `site.webmanifest` in `site/`, copied from `brand/02-App-Icon-and-Favicon/`.

@@ -20,6 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: actions/configure-pages@v5
+      - name: Use the current design-system tokens
+        run: cp design-system/tokens.css site/wp-content/themes/principia/tokens.css
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site

@@ -127,8 +127,8 @@ const preset = {
   theme: {
     screens: { sm: tokens.breakpoint.sm.$value, md: tokens.breakpoint.md.$value, lg: tokens.breakpoint.lg.$value },
     colors: { transparent: "transparent", current: "currentColor", ...nest(pick("color")), ...semanticColors },
-    fontFamily: { sans: resolve(tokens.font.family.sans.$value), mono: resolve(tokens.font.family.mono.$value) },
-    fontWeight: { regular: "400", medium: "500", bold: "700" },
+    fontFamily: Object.fromEntries(Object.entries(tokens.font.family).map(([k, v]) => [k, resolve(v.$value)])),
+    fontWeight: Object.fromEntries(Object.entries(tokens.font.weight).map(([k, v]) => [k, String(v.$value)])),
     fontSize,
     spacing: { ...pick("space"), "section-sm": tokens.layout.section.sm.$value, "section-md": tokens.layout.section.md.$value,
                "section-lg": tokens.layout.section.lg.$value, "section-xl": tokens.layout.section.xl.$value,

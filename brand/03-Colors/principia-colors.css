@@ -1,0 +1,9 @@
+/* PRINCIPIA brand colors, v1.0 */
+:root {
+  --principia-ink: #0B1220;               /* primary: logo, text, dark backgrounds */
+  --principia-signal-blue: #2563EB;       /* accent: logo node, links, primary buttons */
+  --principia-signal-blue-light: #7AA7FF; /* logo node on dark backgrounds only */
+  --principia-paper: #F4F6F8;             /* light surfaces */
+  --principia-slate: #4B5563;             /* secondary text */
+  --principia-white: #FFFFFF;
+}

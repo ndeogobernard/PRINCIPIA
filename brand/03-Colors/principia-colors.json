@@ -1,0 +1,8 @@
+{
+  "ink":               { "hex": "#0B1220", "rgb": [11, 18, 32],    "cmyk_approx": [66, 44, 0, 87] },
+  "signal-blue":       { "hex": "#2563EB", "rgb": [37, 99, 235],   "cmyk_approx": [84, 58, 0, 8] },
+  "signal-blue-light": { "hex": "#7AA7FF", "rgb": [122, 167, 255], "cmyk_approx": [52, 35, 0, 0] },
+  "paper":             { "hex": "#F4F6F8", "rgb": [244, 246, 248], "cmyk_approx": [2, 1, 0, 3] },
+  "slate":             { "hex": "#4B5563", "rgb": [75, 85, 99],    "cmyk_approx": [24, 14, 0, 61] },
+  "white":             { "hex": "#FFFFFF", "rgb": [255, 255, 255], "cmyk_approx": [0, 0, 0, 0] }
+}

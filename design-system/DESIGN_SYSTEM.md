@@ -1,6 +1,6 @@
 # Design System
 
-**Version 1.0.0** · Token source: [`tokens.json`](tokens.json) · Generated outputs: [`tokens.css`](tokens.css), [`tailwind.preset.js`](tailwind.preset.js)
+**Version 2.0.0** · Brand: **PRINCIPIA** (assets and guidelines in [`brand/`](../brand/)) · Token source: [`tokens.json`](tokens.json) · Generated outputs: [`tokens.css`](tokens.css), [`tailwind.preset.js`](tailwind.preset.js)
 
 This document is the single source of truth for the visual language of every website and product built under this system: landing pages, web apps, dashboards, e-commerce and documentation. It describes a **visual language**. It does not describe any particular page layout or content.
 
@@ -11,7 +11,7 @@ This document is the single source of truth for the visual language of every web
 - Values derived because the reference does not define them are marked **(inferred)**, with the reasoning given.
 - Pixel values assume a 16px root, so `1rem = 16px`. Letter-spacing is in `em`, so it scales with font size.
 - Every value here exists in `tokens.json`, and every token in `tokens.json` appears here. `node design-system/scripts/check.mjs` verifies this.
-- In code, **always use the token, never the raw value**. Write `var(--color-text-primary)` or the Tailwind class `text-primary`, not `#23233c`.
+- In code, **always use the token, never the raw value**. Write `var(--color-text-primary)` or the Tailwind class `text-primary`, not `#0b1220`.
 
 **Contents**
 
@@ -22,7 +22,7 @@ This document is the single source of truth for the visual language of every web
 5. [Layout and grid](#5-layout-and-grid)
 6. [Spacing](#6-spacing)
 7. [Shape and elevation](#7-shape-and-elevation)
-8. [Imagery and iconography](#8-imagery-and-iconography)
+8. [Imagery, iconography and logo](#8-imagery-and-iconography)
 9. [Motion](#9-motion)
 10. [Components](#10-components)
 11. [Accessibility](#11-accessibility)
@@ -38,22 +38,22 @@ This document is the single source of truth for the visual language of every web
 
 ### Philosophy
 
-This is a system of **quiet confidence**. Pages are mostly white space and calm, cool neutrals, with a single electric blue for action. Hierarchy comes from **scale, not weight**: almost everything is set in one regular (400) weight, and importance is shown by making type dramatically larger and tracking it tighter, never by making it bolder. Surfaces are flat. Depth comes from contrast between light and dark bands and from full-bleed imagery, not from drop shadows. Interactive things are unmistakable: actions are pill-shaped, and keyboard focus is a thick mint ring that cannot be missed. Motion is short and physical, and it confirms what the user did rather than decorating the page. The result should feel precise, trustworthy and technically advanced, without ever shouting.
+This is a system of **quiet confidence**, applied to the PRINCIPIA brand: **ink, one signal, plenty of white**. Pages are mostly white space and calm Paper surfaces, set in deep PRINCIPIA Ink, with a single Signal Blue for action. Hierarchy comes from **scale, not weight**: every heading uses the same Space Grotesk SemiBold and all reading text uses Inter Regular, so importance is shown by making type dramatically larger, never by adding more weights. Surfaces are flat. Depth comes from contrast between light and Ink bands and from full-bleed imagery, not from drop shadows. Interactive things are unmistakable: actions are pill-shaped and Signal Blue, and keyboard focus is a thick blue ring that cannot be missed. Motion is short and physical, and it confirms what the user did rather than decorating the page. The result should feel precise, technical and trustworthy, like the logo itself: a single clean line that connects.
 
 ### Core principles
 
 | # | Principle | Rationale |
 |---|---|---|
-| 1 | **One weight, many sizes.** Regular (400) is the default for everything, headlines included. 500 is for small labels; 700 appears only inside running text for emphasis. | Size contrast reads as confident. Bold reads as loud. A single weight also keeps the page visually even. |
-| 2 | **Tighter tracking as type gets larger.** Body text is −0.02em, headings are −0.04em and the largest display type is −0.05em. | Large type set at default spacing looks loose. Progressive tightening keeps word shapes compact and deliberate. |
-| 3 | **Calm neutrals, one action colour.** Cool slate neutrals do the work. Blue is reserved for things you can click or act on. | When colour appears only where an action is possible, the user never has to guess what is interactive. |
-| 4 | **Flat surfaces, no decorative shadows.** Separate areas with surface colour, hairline dividers and light and dark bands. Shadows are only for things that float above the page (menus, toasts, modals). | Shadows on static content add noise and imply false physicality. Flat planes look precise and engineered. |
+| 1 | **One heading weight, one reading weight.** Headings are Space Grotesk 600. Reading text is Inter 400. 500 is for labels and buttons; 600 in Inter is for inline emphasis. | Size contrast reads as confident; extra weights read as noise. Two fixed pairings keep every page consistent with the brand. |
+| 2 | **Tighter tracking as type gets larger, wider for labels.** Display −0.03em, headings −0.02em to −0.01em, body −0.01em. Uppercase labels +0.14em. | Space Grotesk is spacious, so large sizes need a little tightening to stay compact. Small uppercase labels need air to stay legible. |
+| 3 | **Ink, one signal, plenty of white.** Ink and white carry the page. Signal Blue is reserved for things you can click or act on, and the logo's node. | When colour appears only where an action is possible, the user never has to guess what is interactive. It also mirrors the logo: one blue point of connection. |
+| 4 | **Flat surfaces, no decorative shadows.** Separate areas with Paper, hairline dividers and light and Ink bands. Shadows are only for things that float above the page (menus, toasts, modals). | Shadows on static content add noise. Flat planes look precise and engineered. |
 | 5 | **Pills for actions, soft corners for containers.** Buttons and chips are fully rounded. Cards and media use 16–20px corners. Form fields use 3–4px. | Shape is a signal. Round means "press me", softly rounded means "a group of content" and nearly square means "type here". |
 | 6 | **Generous, fixed rhythm.** Wide outer margins (108px on desktop) and large vertical gaps (72–140px) between sections. | White space makes each idea feel important. Fixed steps keep pages consistent no matter who builds them. |
-| 7 | **Focus you cannot miss.** Keyboard focus is a 4px mint (`#00e89d`) outline, offset 2px, on every interactive element. | Accessibility is part of the brand. A distinctive ring helps keyboard users and signals care. |
+| 7 | **Focus you cannot miss.** Keyboard focus is a 4px Signal Blue outline (`#2563eb`, or `#7aa7ff` on dark), offset 2px, on every interactive element. | Accessibility is part of the brand. A thick, on-brand ring helps keyboard users and signals care. |
 | 8 | **Motion confirms, it does not decorate.** UI responses take 150–200ms. Content reveals take 600–800ms on a soft ease-out. Hover on actions is a 3–5% scale. | Short, physical motion makes the interface feel responsive. Anything longer or showier slows people down. |
-| 9 | **Let media carry the story.** Real photography and video, full-bleed or in large rounded frames, often on black. | Imagery builds trust faster than decoration. Large frames give it authority. |
-| 10 | **Colour by role, not by name.** Components reference roles (`text.primary`, `action.primary.bg`), never raw hex values. | A new brand colour can then be swapped in without touching a single component. |
+| 9 | **Let media carry the story.** Real photography and video of real engineering work, full-bleed or in large rounded frames, often on Ink or black. | Imagery builds trust faster than decoration. Large frames give it authority. |
+| 10 | **Colour by role, not by name.** Components reference roles (`text.primary`, `action.primary.bg`), never raw hex values. | The brand can evolve, or a sub-brand can be swapped in, without touching a single component. |
 
 ---
 
@@ -61,15 +61,23 @@ This is a system of **quiet confidence**. Pages are mostly white space and calm,
 
 ### 2.1 Primitive palette
 
-These are the raw colours (`color.*` in `tokens.json`). **Components must never use primitives directly.** They use the semantic roles in §2.2.
+These are the raw colours (`color.*` in `tokens.json`). The five PRINCIPIA brand colours come from the brand guidelines (`brand/PRINCIPIA-Brand-Guidelines.pdf`, page 6, and `brand/03-Colors/`). The supporting neutrals and status colours extend them for interfaces. **Components must never use primitives directly.** They use the semantic roles in §2.2.
 
-#### Neutrals: ink and slate (cool blue-grey ramp)
+#### Brand colours
+
+| Token | Brand name | Hex | RGB | CMYK (approx.) | Use |
+|---|---|---|---|---|---|
+| `color.ink.900` | **PRINCIPIA Ink** | `#0b1220` | 11 18 32 | 66 44 0 87 | Primary. Logo, headlines, body text, dark backgrounds. |
+| `color.blue.600` | **Signal Blue** | `#2563eb` | 37 99 235 | 84 58 0 8 | Accent. The logo's node, links, primary buttons, focus. Use sparingly. |
+| `color.blue.300` | **Signal Blue Light** | `#7aa7ff` | 122 167 255 | 52 35 0 0 | The node and accents on dark backgrounds only. **Never on white** (2.39:1). |
+| `color.paper` | **Paper** | `#f4f6f8` | 244 246 248 | 2 1 0 3 | Light surfaces and panels |
+| `color.ink.600` | **Slate** | `#4b5563` | 75 85 99 | 24 14 0 61 | Secondary text and captions |
+| `color.white` | **White** | `#ffffff` | 255 255 255 | 0 0 0 0 | Backgrounds and the reversed logo |
+
+#### Supporting neutrals: slate ramp (cool blue-grey)
 
 | Token | Hex | Notes |
 |---|---|---|
-| `color.ink.900` | `#23233c` | Primary text. A deep blue-violet, softer than black. |
-| `color.ink.600` | `#5f6575` | Secondary text |
-| `color.slate.950` | `#050f1e` | Darkest surface ("night") |
 | `color.slate.900` | `#132237` | Dark raised surface |
 | `color.slate.850` | `#1f2a39` | Dark raised surface, level 2 |
 | `color.slate.800` | `#2e3d4f` | Dark-mode border |
@@ -82,43 +90,31 @@ These are the raw colours (`color.*` in `tokens.json`). **Components must never 
 | `color.slate.200` | `#e5e9f0` | Default divider |
 | `color.slate.100` | `#f4f6f9` | Subtle surface, hover tint |
 | `color.slate.50` | `#fafafb` | Faintest surface (zebra rows in dense tables) |
-| `color.gray.100` | `#f2f2f2` | Muted surface: footers and cards |
-| `color.white` | `#ffffff` | Canvas |
 | `color.black` | `#000000` | Media backgrounds only (behind photos and video) |
 
-#### Accent: blue
+#### Supporting blues
 
 | Token | Hex | Notes |
 |---|---|---|
+| `color.blue.700` | `#1d4ed8` | **(inferred)** Pressed state for Signal Blue |
 | `color.blue.50` | `#eaf3ff` | **(inferred)** Tinted background for info messages |
-| `color.blue.400` | `#4da0ff` | **(inferred)** Accent text in dark mode. Lightened from `blue.500` until it reaches 7:1 on `slate.950`. |
-| `color.blue.500` | `#0077ff` | Brand blue. Use for large text (24px and up), icons and on dark backgrounds only. |
-| `color.blue.600` | `#006fee` | Action blue: primary buttons and accent text on light backgrounds |
-| `color.blue.800` | `#033098` | Deep blue: pressed states, data visualisation and markers |
-| `color.blue.850` | `#003366` | Deep-blue surface |
-| `color.blue.900` | `#061e4d` | Navy surface for callout panels |
 
-#### Highlight: green and teal
+#### Status
 
 | Token | Hex | Notes |
 |---|---|---|
-| `color.green.400` | `#00e89d` | Mint. Focus ring and data highlights. **Never for text on light backgrounds** (1.61:1). |
-| `color.green.300` | `#34d399` | **(inferred)** Success text in dark mode |
-| `color.green.700` | `#00704a` | **(inferred)** Success text on light backgrounds. A darkened mint that meets AA. |
+| `color.green.700` | `#00704a` | **(inferred)** Success text on light backgrounds |
+| `color.green.300` | `#34d399` | **(inferred)** Success in dark mode |
 | `color.green.50` | `#e6fcf5` | **(inferred)** Tinted background for success messages |
-| `color.teal.600` | `#00929d` | Secondary highlight for charts and illustration |
-
-#### Status: red and amber
-
-| Token | Hex | Notes |
-|---|---|---|
 | `color.red.600` | `#ea0000` | Error text, error borders and invalid fields |
 | `color.red.700` | `#c40000` | **(inferred)** Hover and pressed state for destructive buttons, and error text on tinted backgrounds |
 | `color.red.300` | `#ff5c5c` | **(inferred)** Error in dark mode |
 | `color.red.50` | `#fdecec` | **(inferred)** Tinted background for error messages |
-| `color.amber.700` | `#8f4b00` | **(inferred)** Warning text. The reference has no warning colour, so a warm amber was chosen that meets AA on white and on `amber.50`. |
+| `color.amber.700` | `#8f4b00` | **(inferred)** Warning text. Meets AA on white and on `amber.50`. |
 | `color.amber.300` | `#ffb547` | **(inferred)** Warning in dark mode |
 | `color.amber.50` | `#fff4e5` | **(inferred)** Tinted background for warning messages |
+
+Status colours are for status only: never for decoration, charts of ordinary data or brand moments.
 
 #### Alpha colours
 
@@ -126,34 +122,34 @@ These are the raw colours (`color.*` in `tokens.json`). **Components must never 
 |---|---|---|
 | `color.alpha.overlay` | `#00000080` | Black at 50%. Modal backdrop, and the glass button over video. |
 | `color.alpha.shadow-1` | `#0000000a` | Black at 4%. Colour of shadow level 1. |
-| `color.alpha.shadow-2` | `#050f1e1a` | Night at 10%. Colour of shadow level 2. |
+| `color.alpha.shadow-2` | `#0b12201a` | Ink at 10%. Colour of shadow level 2. |
 | `color.alpha.shadow-3` | `#00000066` | Black at 40%. Colour of shadow level 3. |
 
 ### 2.2 Semantic roles
 
-Components use only these (`semantic.light.*` and `semantic.dark.*` in `tokens.json`; `--color-*` in CSS). To rebrand, change which primitive a role points to (see §14), never the components.
+Components use only these (`semantic.light.*` and `semantic.dark.*` in `tokens.json`; `--color-*` in CSS). To change the brand, change which primitive a role points to (see §14), never the components.
 
 | Role | Light mode | Dark mode | Use |
 |---|---|---|---|
-| `bg.canvas` | `white` `#ffffff` | `slate.950` `#050f1e` | Page background |
-| `bg.surface` | `gray.100` `#f2f2f2` | `slate.900` `#132237` | Cards, footer and grouped content |
+| `bg.canvas` | `white` `#ffffff` | `ink.900` `#0b1220` | Page background |
+| `bg.surface` | `paper` `#f4f6f8` | `slate.900` `#132237` | Cards, footer and grouped content |
 | `bg.subtle` | `slate.100` `#f4f6f9` | `slate.850` `#1f2a39` | Hover tints, table stripes, disabled inputs |
-| `bg.inverse` | `slate.950` `#050f1e` | `white` `#ffffff` | Contrast bands, such as a dark section on a light page |
-| `bg.brand` | `blue.900` `#061e4d` | `blue.900` `#061e4d` | Callout panels and promotional banners |
+| `bg.inverse` | `ink.900` `#0b1220` | `white` `#ffffff` | Contrast bands, such as an Ink section on a light page |
+| `bg.brand` | `blue.600` `#2563eb` | `blue.600` `#2563eb` | Signal Blue callout panels and banners, with white text and the white logo |
 | `bg.media` | `black` `#000000` | `black` `#000000` | Behind images and video |
 | `bg.overlay` | `alpha.overlay` `#00000080` | `alpha.overlay` `#00000080` | Modal backdrop |
-| `text.primary` | `ink.900` `#23233c` | `white` `#ffffff` | Body copy and headings |
-| `text.secondary` | `ink.600` `#5f6575` | `slate.400` `#a2abb9` | Supporting copy, descriptions and labels |
+| `text.primary` | `ink.900` `#0b1220` | `white` `#ffffff` | Body copy and headings |
+| `text.secondary` | `ink.600` `#4b5563` | `slate.400` `#a2abb9` | Supporting copy, descriptions and captions |
 | `text.tertiary` | `slate.600` `#5d6e83` | `slate.500` `#7c899a` | Metadata, timestamps, footnotes and placeholders |
 | `text.disabled` | `slate.450` `#949a9f` | `slate.600` `#5d6e83` | Disabled controls only (exempt from contrast minimums) |
-| `text.inverse` | `white` `#ffffff` | `ink.900` `#23233c` | Text on `bg.inverse` |
-| `text.accent` | `blue.600` `#006fee` | `blue.400` `#4da0ff` | Link hover and accent words |
-| `text.on-action` | `white` `#ffffff` | `white` `#ffffff` | Text on primary and destructive buttons |
-| `action.primary.bg` | `blue.600` `#006fee` | `blue.600` `#006fee` | Primary button fill |
-| `action.primary.bg-hover` | `white` `#ffffff` | `slate.950` `#050f1e` | Primary button on hover (the fill inverts; see §2.4) |
-| `action.primary.fg-hover` | `blue.600` `#006fee` | `blue.400` `#4da0ff` | Primary button text on hover |
-| `action.primary.bg-pressed` | `blue.800` `#033098` | `blue.800` `#033098` | **(inferred)** Primary button while pressed |
-| `action.secondary.border` | `ink.900` `#23233c` | `white` `#ffffff` | Outline button stroke and text |
+| `text.inverse` | `white` `#ffffff` | `ink.900` `#0b1220` | Text on `bg.inverse` |
+| `text.accent` | `blue.600` `#2563eb` | `blue.300` `#7aa7ff` | Links and accent words |
+| `text.on-action` | `white` `#ffffff` | `white` `#ffffff` | Text on primary and destructive buttons, and on `bg.brand` |
+| `action.primary.bg` | `blue.600` `#2563eb` | `blue.600` `#2563eb` | Primary button fill |
+| `action.primary.bg-hover` | `white` `#ffffff` | `ink.900` `#0b1220` | Primary button on hover (the fill inverts; see §2.4) |
+| `action.primary.fg-hover` | `blue.600` `#2563eb` | `blue.300` `#7aa7ff` | Primary button text on hover |
+| `action.primary.bg-pressed` | `blue.700` `#1d4ed8` | `blue.700` `#1d4ed8` | **(inferred)** Primary button while pressed |
+| `action.secondary.border` | `ink.900` `#0b1220` | `white` `#ffffff` | Outline button stroke and text |
 | `action.destructive.bg` | `red.600` `#ea0000` | `red.600` `#ea0000` | **(inferred)** Destructive button fill |
 | `action.destructive.bg-hover` | `red.700` `#c40000` | `red.700` `#c40000` | **(inferred)** Destructive button on hover and press |
 | `border.default` | `slate.200` `#e5e9f0` | `slate.800` `#2e3d4f` | Dividers and card outlines |
@@ -161,40 +157,41 @@ Components use only these (`semantic.light.*` and `semantic.dark.*` in `tokens.j
 | `border.input` | `slate.500` `#7c899a` | `slate.500` `#7c899a` | Text inputs and selects (meets 3:1 for non-text contrast) |
 | `border.input-hover` | `slate.600` `#5d6e83` | `slate.400` `#a2abb9` | **(inferred)** Input border on hover |
 | `border.control` | `slate.600` `#5d6e83` | `slate.400` `#a2abb9` | Checkboxes and radio buttons |
-| `focus.ring` | `green.400` `#00e89d` | `green.400` `#00e89d` | Keyboard focus outline on every interactive element |
-| `highlight` | `green.400` `#00e89d` | `green.400` `#00e89d` | Data highlights, active markers and the toggle "on" track |
+| `focus.ring` | `blue.600` `#2563eb` | `blue.300` `#7aa7ff` | Keyboard focus outline on every interactive element |
+| `highlight` | `blue.600` `#2563eb` | `blue.300` `#7aa7ff` | Active markers, selected states, the toggle "on" track and the first data series |
+| `logo.ink` | `ink.900` `#0b1220` | `white` `#ffffff` | The logo's letters (full-colour and reversed versions) |
+| `logo.node` | `blue.600` `#2563eb` | `blue.300` `#7aa7ff` | The logo's node. Use the supplied artwork; this role is for reference and for building lock-ups. |
 | `status.success.fg` / `.bg` | `green.700` / `green.50` | `green.300` / `slate.900` | **(inferred)** Success |
 | `status.warning.fg` / `.bg` | `amber.700` / `amber.50` | `amber.300` / `slate.900` | **(inferred)** Warning |
-| `status.error.fg` / `.bg` | `red.600` / `red.50` | `red.300` / `slate.900` | Error (light foreground measured; the rest inferred) |
+| `status.error.fg` / `.bg` | `red.600` / `red.50` | `red.300` / `slate.900` | Error |
 | `status.error.fg-strong` | `red.700` `#c40000` | `red.300` `#ff5c5c` | **(inferred)** Error text inside a tinted error alert |
-| `status.info.fg` / `.bg` | `blue.600` / `blue.50` | `blue.400` / `slate.900` | **(inferred)** Info |
+| `status.info.fg` / `.bg` | `blue.600` / `blue.50` | `blue.300` / `slate.900` | **(inferred)** Info |
 
-**Dark mode (inferred).** The reference has no dark-mode switch. It does have many dark sections, built from `slate.950`, `blue.900` and `black` with white and `slate.400` text. The dark column above uses those same colours, so dark mode looks like one of the reference's own dark sections stretched across the whole page. Only text-accent and status colours had to be lightened to keep AA contrast. Turn it on with `data-theme="dark"` on `<html>`. Without a `data-theme` attribute, the page follows the operating-system setting.
+**Dark mode.** Dark mode is an Ink canvas, exactly like the brand's reversed backgrounds, with white text, `slate.400` secondary text and Signal Blue Light accents (the brand's rule for the node on dark). Turn it on with `data-theme="dark"` on `<html>`. Without a `data-theme` attribute, the page follows the operating-system setting.
 
-### 2.3 Usage ratio: 70 / 20 / 8 / 2 (inferred from an element-colour count of the reference)
+### 2.3 Usage ratio: 70 / 25 / 5 (from the brand guidelines)
 
 | Share | What | Why |
 |---|---|---|
-| **70%** | Light neutral surfaces: `bg.canvas` and `bg.surface`, mostly white space | Calm, open and premium |
-| **20%** | Ink and dark surfaces: text, `bg.inverse` bands and media | Gives the page weight and rhythm, and alternating light and dark bands replace shadows |
-| **8%** | Action blue | Buttons, accent text and selected states. Scarcity is what makes blue mean "act here". |
-| **2%** | Mint highlight | Focus rings and one-off data highlights. Never for decoration. |
+| **70%** | White or Paper | Calm, open and premium; the brand's "plenty of white" |
+| **25%** | PRINCIPIA Ink: text, Ink bands, the logo | Gives the page weight and rhythm, and alternating light and Ink bands replace shadows |
+| **5%** | Signal Blue | Buttons, links, focus, selected states and the logo's node. Scarcity is what makes blue mean "act here". |
 
-A screen that is noticeably more than 10% blue is over-using the accent. Use outline buttons or text links for secondary actions instead.
+A screen that is noticeably more than 5% blue is over-using the signal. Use outline buttons or plain text links for secondary actions instead. A Signal Blue callout panel (`bg.brand`) counts towards the 5%, so use at most one per page.
 
 ### 2.4 Interactive states
 
 | Element | Default | Hover | Focus-visible | Active / pressed | Disabled |
 |---|---|---|---|---|---|
-| Primary button | bg `#006fee`, text `#ffffff`, 1px border `#006fee` | bg `#ffffff`, text `#006fee`, border `#006fee` (inverts), scale 1.05 | 4px `#00e89d` outline, 2px offset | scale 0.98, bg `#033098` **(inferred)** | opacity 0.5, `cursor: not-allowed` |
-| Secondary (outline) button | transparent, text and 1px border `#23233c` | bg `#23233c`, text `#ffffff`, scale 1.05 **(inferred, mirrors primary)** | as above | scale 0.98 | opacity 0.5 |
+| Primary button | bg `#2563eb`, text `#ffffff`, 1px border `#2563eb` | bg `#ffffff`, text `#2563eb`, border `#2563eb` (inverts), scale 1.05 | 4px `#2563eb` outline, 2px offset | scale 0.98, bg `#1d4ed8` **(inferred)** | opacity 0.5, `cursor: not-allowed` |
+| Secondary (outline) button | transparent, text and 1px border `#0b1220` | bg `#0b1220`, text `#ffffff`, scale 1.05 | as above | scale 0.98 | opacity 0.5 |
 | Destructive button **(inferred)** | bg `#ea0000`, text `#ffffff` | bg `#c40000`, scale 1.05 | as above | scale 0.98, bg `#c40000` | opacity 0.5 |
-| Text link (in body copy) | inherits text colour, no underline | colour `#006fee` | as above | colour `#033098` **(inferred)** | `#949a9f` |
-| Navigation link | `#23233c` | `#006fee` | as above | n/a | n/a |
+| Text link (in body copy) | `#2563eb`, no underline | underline appears | as above | colour `#1d4ed8` **(inferred)** | `#949a9f` |
+| Navigation link | `#0b1220` | `#2563eb` | as above | n/a | n/a |
 | Text input | border 1px `#7c899a`, bg `#ffffff` | border `#5d6e83` **(inferred)** | as above | n/a | bg `#f4f6f9`, text `#949a9f` |
 | Invalid input | border 1px `#ea0000`, text `#ea0000` | n/a | as above | n/a | n/a |
 
-**Deviation from the reference (on purpose).** The reference turns links `#0077ff` on hover. On white that is **4.13:1**, which fails WCAG AA for normal-size text. This system uses `#006fee` (**4.66:1**) for accent text on light backgrounds. `#0077ff` stays available for large text (24px and up), icons and dark backgrounds, where it passes.
+On dark backgrounds, every `#2563eb` in this table becomes `#7aa7ff` (Signal Blue Light) for text, links and the focus ring. Button fills stay `#2563eb`.
 
 ### 2.5 Contrast ratios (WCAG 2.2)
 
@@ -202,25 +199,26 @@ Thresholds: **AA** needs 4.5:1 for normal text and 3:1 for large text (24px and 
 
 | Foreground | Background | Ratio | Result | Allowed use |
 |---|---|---|---|---|
-| `#23233c` text.primary | `#ffffff` canvas | **15.25** | AAA | All text |
-| `#23233c` | `#f2f2f2` surface | **13.62** | AAA | All text |
-| `#23233c` | `#f4f6f9` subtle | **14.09** | AAA | All text |
-| `#23233c` | `#e5e9f0` | **12.52** | AAA | All text |
-| `#5f6575` text.secondary | `#ffffff` | **5.83** | AA | All text |
-| `#5f6575` | `#f2f2f2` | **5.20** | AA | All text |
-| `#5f6575` | `#f4f6f9` | **5.38** | AA | All text |
+| `#0b1220` Ink | `#ffffff` White | **18.72** | AAA | All text |
+| `#0b1220` | `#f4f6f8` Paper | **17.28** | AAA | All text |
+| `#0b1220` | `#f4f6f9` subtle | **17.29** | AAA | All text |
+| `#0b1220` | `#e5e9f0` | **15.38** | AAA | All text |
+| `#4b5563` Slate | `#ffffff` | **7.56** | AAA | All text |
+| `#4b5563` | `#f4f6f8` | **6.98** | AA | All text |
+| `#4b5563` | `#f4f6f9` | **6.98** | AA | All text |
 | `#5d6e83` text.tertiary | `#ffffff` | **5.22** | AA | All text |
-| `#5d6e83` | `#f2f2f2` | **4.66** | AA | All text |
+| `#5d6e83` | `#f4f6f8` | **4.82** | AA | All text |
 | `#7c899a` border.input | `#ffffff` | **3.56** | AA (non-text) | Borders and icons, or large text only |
+| `#7c899a` | `#f4f6f8` | **3.28** | AA (non-text) | Borders and icons only |
 | `#949a9f` | `#ffffff` | **2.84** | Fails | Disabled text and decorative dividers only |
 | `#ccd3dc` | `#ffffff` | **1.51** | Fails | Decorative tracks only |
-| `#ffffff` text.on-action | `#006fee` action | **4.66** | AA | Button labels |
-| `#006fee` text.accent | `#ffffff` | **4.66** | AA | Links and accent text |
-| `#0077ff` brand blue | `#ffffff` | **4.13** | AA large only | 24px and up, icons |
-| `#0077ff` | `#f2f2f2` | **3.69** | AA large only | 24px and up, icons |
-| `#ffffff` | `#033098` | **11.17** | AAA | All text |
-| `#ffffff` | `#061e4d` bg.brand | **16.15** | AAA | All text |
-| `#ffffff` | `#003366` | **12.61** | AAA | All text |
+| `#2563eb` Signal Blue | `#ffffff` | **5.17** | AA | Links, accent text, focus ring |
+| `#ffffff` | `#2563eb` | **5.17** | AA | Button labels and text on `bg.brand` |
+| `#2563eb` | `#f4f6f8` | **4.77** | AA | Links on Paper |
+| `#1d4ed8` | `#ffffff` | **6.70** | AA | Pressed links |
+| `#ffffff` | `#1d4ed8` | **6.70** | AA | Pressed button labels |
+| `#7aa7ff` Signal Blue Light | `#ffffff` | **2.39** | Fails | **Never on white** (brand rule) |
+| `#7aa7ff` | `#2563eb` | **2.17** | Fails | Never on Signal Blue |
 | `#ea0000` error | `#ffffff` | **4.67** | AA | Error text and borders |
 | `#ffffff` | `#ea0000` | **4.67** | AA | Destructive button label |
 | `#c40000` | `#fdecec` error bg | **5.49** | AA | Error text in alerts |
@@ -228,26 +226,25 @@ Thresholds: **AA** needs 4.5:1 for normal text and 3:1 for large text (24px and 
 | `#00704a` | `#e6fcf5` success bg | **5.74** | AA | Success text in alerts |
 | `#8f4b00` warning | `#ffffff` | **6.62** | AA | Warning text |
 | `#8f4b00` | `#fff4e5` warning bg | **6.09** | AA | Warning text in alerts |
-| `#006fee` info | `#eaf3ff` info bg | **4.16** | AA large / non-text | Icons and titles of 24px and up. Use `#23233c` for body text in info alerts. |
-| `#00e89d` focus | `#ffffff` | **1.61** | Fails as text | Never text. As a 4px ring it relies on its thickness and offset against the element. |
-| `#00e89d` | `#23233c` | **9.46** | AAA | Highlight text on ink |
-| `#00e89d` | `#050f1e` | **11.92** | AAA | Highlight text and focus ring in dark mode |
-| `#00929d` teal | `#ffffff` | **3.75** | AA large only | Charts and icons |
-| **Dark mode** | | | | |
-| `#ffffff` | `#050f1e` canvas | **19.20** | AAA | All text |
+| `#2563eb` info | `#eaf3ff` info bg | **4.62** | AA | Info text and icons in alerts |
+| `#0b1220` | `#eaf3ff` | **16.73** | AAA | Body text in info alerts |
+| **Dark backgrounds** | | | | |
+| `#ffffff` | `#0b1220` Ink | **18.72** | AAA | All text |
 | `#ffffff` | `#132237` surface | **16.01** | AAA | All text |
 | `#ffffff` | `#1f2a39` subtle | **14.50** | AAA | All text |
-| `#a2abb9` secondary | `#050f1e` | **8.29** | AAA | All text |
+| `#a2abb9` secondary | `#0b1220` | **8.08** | AAA | All text |
 | `#a2abb9` | `#132237` | **6.91** | AA | All text |
-| `#ccd3dc` | `#050f1e` | **12.73** | AAA | All text |
-| `#7c899a` tertiary | `#050f1e` | **5.40** | AA | All text |
-| `#5d6e83` disabled | `#050f1e` | **3.68** | n/a | Disabled only |
-| `#4da0ff` accent | `#050f1e` | **7.12** | AAA | Links and accent text |
-| `#4da0ff` | `#132237` | **5.94** | AA | Links and accent text |
-| `#0077ff` | `#050f1e` | **4.65** | AA | All text |
-| `#ff5c5c` error | `#050f1e` | **6.34** | AA | Error |
-| `#34d399` success | `#050f1e` | **9.99** | AAA | Success |
-| `#ffb547` warning | `#050f1e` | **10.93** | AAA | Warning |
+| `#ccd3dc` | `#0b1220` | **12.41** | AAA | All text |
+| `#7c899a` tertiary | `#0b1220` | **5.26** | AA | All text |
+| `#5d6e83` disabled | `#0b1220` | **3.59** | n/a | Disabled only |
+| `#7aa7ff` accent | `#0b1220` | **7.84** | AAA | Links, accent text, focus ring |
+| `#7aa7ff` | `#132237` | **6.71** | AA | Links and accent text |
+| `#0b1220` | `#7aa7ff` | **7.84** | AAA | Ink text on a Signal Blue Light chip |
+| `#2563eb` | `#0b1220` | **3.62** | AA large / non-text | Button fills and icons only; use `#7aa7ff` for text on Ink |
+| `#2563eb` | `#132237` | **3.10** | AA large / non-text | Button fills and icons only |
+| `#ff5c5c` error | `#0b1220` | **6.19** | AA | Error |
+| `#34d399` success | `#0b1220` | **9.74** | AAA | Success |
+| `#ffb547` warning | `#0b1220` | **10.66** | AAA | Warning |
 
 **Rule:** if a text and background pair is not in this table, do not use it until its ratio has been checked and added here.
 
@@ -257,50 +254,52 @@ Thresholds: **AA** needs 4.5:1 for normal text and 3:1 for large text (24px and 
 
 ### 3.1 Font families
 
-| Role | Token | Reference font (licensed) | Open-source substitute (default) | Fallback stack |
-|---|---|---|---|---|
-| **Primary**: everything except labels and code | `font.family.sans` | **GT Walsheim** by Grilli Type. Commercial licence from grillitype.com (desktop and web licences sold separately). | **DM Sans**, SIL Open Font License, from Google Fonts or `@fontsource-variable/dm-sans`. A geometric sans with similar proportions. | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif` |
-| **Mono**: labels, eyebrows, data, code | `font.family.mono` | **Simplon Mono** (with Simplon BP for labels) by Colophon Foundry. Commercial licence from colophon-foundry.org. | **IBM Plex Mono**, SIL Open Font License, from Google Fonts or `@fontsource/ibm-plex-mono` | `ui-monospace, SFMono-Regular, Menlo, Consolas, "Roboto Mono", monospace` |
+Both brand typefaces are free under the SIL Open Font License. The font files and licences are in `brand/04-Fonts/`; they are also on Google Fonts.
 
-The open-source substitutes are the **default** in `tokens.json`. A project that buys the licensed fonts puts them first in the family list (§14, step 3).
+| Role | Token | Font | Use | Fallback stack |
+|---|---|---|---|---|
+| **Display** | `font.family.display` | **Space Grotesk**: Medium (500) and SemiBold (600) | Headings, labels and eyebrows, large text CTAs, the wordmark | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif` |
+| **Text** | `font.family.sans` | **Inter**: Regular (400), Medium (500) and SemiBold (600) | Body text, interfaces, data, buttons, forms | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif` |
+| **Code** | `font.family.mono` | **IBM Plex Mono** (SIL Open Font License) | Code only. Not part of the brand voice. | `ui-monospace, SFMono-Regular, Menlo, Consolas, monospace` |
 
 **Rules**
 
-- Self-host the font files (WOFF2) with `font-display: swap`, and preload the primary regular weight. The reference uses `font-display: block` for its regular weight. This system uses `swap`, so text is visible straight away on slow connections.
-- Load only the weights in use: **400** (`font.weight.regular`), **500** (`font.weight.medium`) and **700** (`font.weight.bold`, inline emphasis only). Variable fonts cover all three in one file.
-- Never use more than these two families. Never add a serif or a display face.
-- The tracking values below were checked visually with DM Sans and apply unchanged to GT Walsheim.
+- Self-host the fonts as WOFF2 with `font-display: swap`. Preload Inter Regular and Space Grotesk SemiBold.
+- Load only these weights: Space Grotesk **500** (`font.weight.medium`) and **600** (`font.weight.semibold`), and Inter **400** (`font.weight.regular`), **500** and **600**.
+- Never use another typeface, and never fake bold or italic.
+- **The logo is artwork, not type.** Never set "PRINCIPIA" in Space Grotesk to stand in for the logo. Always use the supplied files (§8.5).
 
 ### 3.2 Type scale
 
-Tokens are `typography.<name>.desktop` and `typography.<name>.mobile`; in CSS, `.type-<name>` or `--type-<name>-size` and so on. **Desktop values apply from 600px wide** (`breakpoint.sm`), where the reference changes its type. Mobile values apply below 600px. Line height is in px, with the ratio in brackets.
+Tokens are `typography.<name>.desktop` and `typography.<name>.mobile`; in CSS, `.type-<name>` or `--type-<name>-size` and so on. **Desktop values apply from 600px wide** (`breakpoint.sm`). Mobile values apply below 600px. Sizes and line heights are measured from the reference implementation. Letter-spacing has been adjusted for Space Grotesk and Inter, and weights follow the brand guidelines.
 
-| Token | Use | Desktop size / line height | Mobile size / line height | Weight | Letter-spacing | Family | Case |
-|---|---|---|---|---|---|---|---|
-| `display` | Hero statement, one per page at most | 128px / 140.8px (1.1) | 80px / 84px (1.05) | 400 | −0.04em | sans | Sentence |
-| `display-number` | Big statistics ("20M+") | 72px / 72px (1.0) | 72px / 72px (1.0) | 400 | −0.028em | sans | n/a |
-| `h1` | Page title and section headline | 63px / 63px (1.0) | 45px / 45px (1.0) | 400 | −0.04em | sans | Sentence |
-| `h2` | Major sub-section and pull quote | 50px / 55px (1.1) | 31px / 34.1px (1.1) | 400 | −0.05em | sans | Sentence |
-| `h3` | Section title inside a page | 40px / 48px (1.2) | 30px / 36px (1.2) | 400 | −0.04em | sans | Sentence |
-| `h4` | Card title and feature title | 30px / 31.5px (1.05) | 30px / 31.5px (1.05) | 400 | −0.04em | sans | Sentence |
-| `h5` | Small card title and large link | 24px / 26.4px (1.1) | 24px / 26.4px (1.1) | 400 | −0.04em | sans | Sentence |
-| `h6` | Stat label and dense heading | 18px / 19.8px (1.1) | 18px / 19.8px (1.1) | 400 | −0.05em | sans | Sentence |
-| `body-l` | Lead and intro paragraph | 24px / 36px (1.5) | 20px / 28px (1.4) **(inferred)** | 400 | −0.04em | sans | Sentence |
-| `body-m` | Default body text | 16px / 24px (1.5) | 16px / 24px (1.5) | 400 | −0.02em | sans | Sentence |
-| `body-s` | Navigation, secondary copy, table cells | 14px / 21px (1.5) | 14px / 21px (1.5) | 400 | −0.02em | sans | Sentence |
-| `caption` | Footnotes and legal text | 12px / 13.2px (1.1) | 12px / 13.2px (1.1) | 400 | −0.02em | sans | Sentence |
-| `label` | Eyebrow above a heading, tags, metadata | 12px / 18px (1.5) | 12px / 18px (1.5) | 500 | +0.1em | mono | UPPERCASE |
-| `label-l` | Units beside big numbers, data labels | 16px / 28px (1.75) | 16px / 28px (1.75) | 400 | +0.125em | mono | UPPERCASE |
-| `button` | Button and pill labels | 16px / 24px (1.5) | 16px / 24px (1.5) | 400 | −0.02em | sans | Sentence |
-| `button-l` | Large text CTA (link with circle-arrow icon) | 24px / 26.4px (1.1) | 24px / 26.4px (1.1) | 400 | −0.04em | sans | Sentence |
-| `nav-mobile` | Items in the full-screen mobile menu | n/a | 40px / 46px (1.15) | 400 | −0.008em | sans | Sentence |
-| `code` | Inline and block code | 14px / 21px (1.5) **(inferred)** | 14px / 21px (1.5) | 400 | 0em | mono | n/a |
+| Token | Use | Desktop size / line height | Mobile size / line height | Font and weight | Letter-spacing | Case |
+|---|---|---|---|---|---|---|
+| `display` | Hero statement, one per page at most | 128px / 140.8px (1.1) | 80px / 84px (1.05) | Space Grotesk 600 | −0.03em | Sentence |
+| `display-number` | Big statistics ("20M+") | 72px / 72px (1.0) | 72px / 72px (1.0) | Space Grotesk 600 | −0.03em | n/a |
+| `h1` | Page title and section headline | 63px / 63px (1.0) | 45px / 45px (1.0) | Space Grotesk 600 | −0.02em | Sentence |
+| `h2` | Major sub-section and pull quote | 50px / 55px (1.1) | 31px / 34.1px (1.1) | Space Grotesk 600 | −0.02em | Sentence |
+| `h3` | Section title inside a page | 40px / 48px (1.2) | 30px / 36px (1.2) | Space Grotesk 600 | −0.02em | Sentence |
+| `h4` | Card title and feature title | 30px / 31.5px (1.05) | 30px / 31.5px (1.05) | Space Grotesk 600 | −0.01em | Sentence |
+| `h5` | Small card title | 24px / 26.4px (1.1) | 24px / 26.4px (1.1) | Space Grotesk 600 | −0.01em | Sentence |
+| `h6` | Stat label and dense heading | 18px / 19.8px (1.1) | 18px / 19.8px (1.1) | Space Grotesk 600 | −0.01em | Sentence |
+| `body-l` | Lead and intro paragraph | 24px / 36px (1.5) | 20px / 28px (1.4) **(inferred)** | Inter 400 | −0.01em | Sentence |
+| `body-m` | Default body text | 16px / 24px (1.5) | 16px / 24px (1.5) | Inter 400 | −0.01em | Sentence |
+| `body-s` | Navigation, secondary copy, table cells | 14px / 21px (1.5) | 14px / 21px (1.5) | Inter 400 | −0.01em | Sentence |
+| `caption` | Footnotes and legal text | 12px / 13.2px (1.1) | 12px / 13.2px (1.1) | Inter 400 | 0em | Sentence |
+| `eyebrow` | The small label above a heading | 12px / 18px (1.5) | 12px / 18px (1.5) | Space Grotesk 600 | +0.14em | UPPERCASE |
+| `label` | Tags, badges, table headers, footer headings, metadata | 12px / 18px (1.5) | 12px / 18px (1.5) | Space Grotesk 500 | +0.14em | UPPERCASE |
+| `label-l` | Units beside big numbers, data labels | 16px / 28px (1.75) | 16px / 28px (1.75) | Space Grotesk 500 | +0.14em | UPPERCASE |
+| `button` | Button and pill labels | 16px / 24px (1.5) | 16px / 24px (1.5) | Inter 500 | −0.01em | Sentence |
+| `button-l` | Large text CTA (link with circle-arrow icon) | 24px / 26.4px (1.1) | 24px / 26.4px (1.1) | Space Grotesk 600 | −0.01em | Sentence |
+| `nav-mobile` | Items in the full-screen mobile menu | n/a | 40px / 46px (1.15) | Space Grotesk 600 | −0.02em | Sentence |
+| `code` | Inline and block code | 14px / 21px (1.5) **(inferred)** | 14px / 21px (1.5) | IBM Plex Mono 400 | 0em | n/a |
 
 **Why these numbers**
 
-- **Everything is weight 400**, including the 128px display, because hierarchy comes from size (principle 1). The reference uses 400 in about 900 declarations, 500 in 91 and 700 in 89, the last almost entirely for inline emphasis.
-- **Line height tightens as size grows:** 1.5 for body, 1.1–1.2 for headings and 1.0 for the largest titles. Large type with body-style leading falls apart into separate lines. Small type with tight leading becomes hard to read.
-- **Tracking tightens as size grows:** −0.02em at 16px, −0.04em from 24px and −0.05em for H2. Labels go the other way, to +0.1em, because small uppercase text needs extra space to stay legible.
+- **Weights come from the brand:** SemiBold for headings, Medium for small labels, Regular for reading, and Medium or SemiBold for buttons and emphasis. Hierarchy still comes from size (principle 1): every heading is the same weight.
+- **Line height tightens as size grows:** 1.5 for body, 1.1–1.2 for headings and 1.0 for the largest titles. Large type with body-style leading falls apart into separate lines.
+- **Tracking:** Space Grotesk SemiBold is wide, so large headings tighten (−0.02em for H1–H3, −0.03em for display), which matches the headings in the brand guidelines. Inter reads best slightly tight at text sizes (−0.01em). Uppercase labels use the brand's +0.14em.
 - **H4 to H6 do not shrink on mobile.** They are already at reading size. Only display, H1–H3 and body-l scale down.
 
 ### 3.3 Rules
@@ -313,17 +312,17 @@ Tokens are `typography.<name>.desktop` and `typography.<name>.mobile`; in CSS, `
 
 **Paragraph and heading spacing**
 - Between paragraphs: **16px** **(inferred)**.
-- Label (eyebrow) to heading: **8px**.
+- Eyebrow to heading: **8px**.
 - Heading to the following body text: **24px**.
 - Heading to the following content group (cards, a list, media): **40px**.
 - Body text to a button row: **40px**.
 
 **Pairing**
-- Use sans for all reading and display text. Use mono only for `label`, `label-l` and `code`. Never set a paragraph in mono.
-- A label sits **above** a heading as an eyebrow, never below it or inside it.
+- Space Grotesk for headings, eyebrows, labels and large CTAs. Inter for everything that is read or used: paragraphs, buttons, forms, tables and navigation.
+- An eyebrow sits **above** a heading, never below it or inside it.
 - Keep the HTML heading order correct (h1, then h2, then h3). If a design needs more visual contrast, use a larger style on the correct element: an `<h2>` may use the `h1` style. Never skip heading levels in the HTML.
-- Emphasis inside running text uses weight **700**, never italic and never colour. Colour is reserved for links.
-- Do not use all caps in sans. Uppercase is reserved for mono labels.
+- Emphasis inside running text uses Inter **600**, never italic and never colour. Colour is reserved for links.
+- Uppercase is only for Space Grotesk labels and eyebrows, always with +0.14em tracking. Never set Inter or a heading in all caps.
 - Numbers in tables and data use `font-variant-numeric: tabular-nums`.
 
 ---
@@ -334,10 +333,10 @@ Tokens are `typography.<name>.desktop` and `typography.<name>.mobile`; in CSS, `
 
 1. **Size.** The main lever. Adjacent levels differ by **at least 1.25×** in size (for example `h3` 40px against `body-l` 24px is 1.67×). A difference under 1.25× reads as a mistake, not as hierarchy.
 2. **Space.** More space above an element means it starts something new. Section gaps (72–140px) are much larger than gaps between blocks (40–54px) and between items (16–24px), so grouping is obvious without lines or boxes.
-3. **Colour value.** Primary text `#23233c` is for what must be read, secondary `#5f6575` for what supports it and tertiary `#5d6e83` for metadata. Lighter colour means less important.
-4. **Case and family.** A 12px mono uppercase label signals "category" or "context" above a heading, without competing with it.
+3. **Colour value.** Primary text `#0b1220` (Ink) is for what must be read, secondary `#4b5563` (Slate) for what supports it and tertiary `#5d6e83` for metadata. Lighter colour means less important.
+4. **Case and family.** A 12px Space Grotesk uppercase eyebrow signals "category" or "context" above a heading, without competing with it.
 5. **Accent.** Blue marks the one action that matters on a screen. It is not used to signal importance in text.
-6. **Weight.** Last resort. 700 appears only inside running text. A heading never relies on weight.
+6. **Weight.** Fixed by role, never used as a lever: every heading is Space Grotesk 600, and Inter 600 appears only as inline emphasis.
 
 ### 4.2 Levels per screen
 
@@ -349,7 +348,7 @@ Tokens are `typography.<name>.desktop` and `typography.<name>.mobile`; in CSS, `
 
 **Marketing section**
 ```
-LABEL       "PLATFORM"                  label, text.secondary
+EYEBROW     "PLATFORM"                  eyebrow, text.secondary
             ↓ 8px
 HEADLINE    "Built for real projects"   h1 (63px), text.primary
             ↓ 24px
@@ -357,7 +356,7 @@ LEAD        one or two sentences        body-l (24px), text.secondary, max 50ch
             ↓ 40px
 ACTIONS     [Primary pill] [Outline pill]
 ```
-Hierarchy: 63px against 24px (2.6×) against 12px uppercase mono. One filled button.
+Hierarchy: 63px against 24px (2.6×) against a 12px uppercase eyebrow. One filled button.
 
 **Dashboard card**
 ```
@@ -372,7 +371,7 @@ The value dominates because of size alone. The delta uses status colour because 
 **Documentation page**
 ```
 h1 (63px) page title → body-l intro → h3 (40px) section → body-m (16px) paragraphs, max 70ch
-→ code (14px mono) blocks on bg.subtle → caption footnotes
+→ code (14px IBM Plex Mono) blocks on bg.subtle → caption footnotes
 ```
 
 ---
@@ -489,7 +488,7 @@ The reference is almost entirely flat: 1,159 of 1,167 elements measured had no s
 |---|---|---|
 | `shadow.0` | none | Everything static: cards, sections, buttons and images |
 | `shadow.1` | `0px 1px 3px 0px #0000000a` | The sticky header once the page has scrolled, and select menus |
-| `shadow.2` | `0px 4px 12px 0px #050f1e1a` | Dropdowns, popovers, tooltips and toasts |
+| `shadow.2` | `0px 4px 12px 0px #0b12201a` | Dropdowns, popovers, tooltips and toasts |
 | `shadow.3` | `0px 4px 16px 0px #00000066` | Modals and dialogs (always over `bg.overlay`) |
 
 Never use a shadow to make a card look "clickable". Use the hover scale and surface change in §10.5 instead.
@@ -532,9 +531,9 @@ Never use a shadow to make a card look "clickable". Use the hover scale and surf
 
 ### 8.3 Illustration and data graphics
 
-- Flat and geometric, with no gradients except a two-stop blue-to-mint accent (`#0077ff` to `#00e89d`) used sparingly in thin rules or highlights.
+- Flat and geometric, with no gradients. Line work follows the logo: a single continuous line with round ends, and a Signal Blue node (a filled circle) marking the point of connection.
 - Line work uses the icon stroke (2px) at the same scale.
-- Charts use `#0077ff`, `#033098`, `#00e89d` and `#00929d` on neutral axes (`border.default`), with labels in `label` style.
+- Charts use Signal Blue `#2563eb` for the main series, Ink `#0b1220` and Slate `#4b5563` for comparison series and `#ccd3dc` for the rest, on neutral axes (`border.default`), with labels in `label` style. On Ink backgrounds the main series is `#7aa7ff`. Status colours are only for status.
 
 ### 8.4 Icons (`icon.*`)
 
@@ -551,6 +550,64 @@ Never use a shadow to make a card look "clickable". Use the hover scale and surf
 - Icons inherit `currentColor`. Never colour an icon differently from the text beside it, except for status icons, which use the status colour.
 - The signature link icon is a **circle with a right arrow**, at 28px, placed **before** the link text with a 10px gap.
 - Icon-only buttons need an `aria-label` and a hit area of at least 44px (§11).
+
+### 8.5 Logo (from the PRINCIPIA brand guidelines)
+
+The first letter of PRINCIPIA is drawn as a single continuous line that leaves the stem, sweeps around and returns to a blue **node**: the point where two tools, two datasets or two disciplines connect. The other letters are Space Grotesk SemiBold capitals with open letter-spacing, converted to outlines. **Always use the supplied artwork in `brand/01-Logo/`. Never retype the logo.**
+
+**Versions**
+
+| Version | File | Use |
+|---|---|---|
+| **Primary logo** (the default) | `brand/01-Logo/Primary-Logo/` | Website header and footer, documents, presentations, signage, merchandise |
+| **Symbol** (the P with its node) | `brand/01-Logo/Symbol/` | App icon, favicon, social avatars, and small or square spaces where the name already appears nearby |
+| **Name only** (rare) | `brand/01-Logo/Name-Only/` | Very small text-only uses (legal lines, engraving) where the symbol's detail would be lost |
+
+**Never place the symbol next to the primary logo or the name-only version**: that shows the P twice.
+
+**Colour versions: choose by background**
+
+| Version | Background | Letters | Node |
+|---|---|---|---|
+| `color` (default) | White, Paper and other light backgrounds | Ink `#0b1220` | Signal Blue `#2563eb` |
+| `reversed` | Ink and other dark backgrounds | White `#ffffff` | Signal Blue Light `#7aa7ff` |
+| `black` | One-colour printing, engraving, stamps | Black | Black |
+| `white` | Photos and coloured backgrounds, including Signal Blue | White | White |
+
+File names follow `PRINCIPIA-[version]-[color].[format]`, for example `PRINCIPIA-logo-reversed.svg`. Use **SVG** on the web, **PDF or EPS** for print, and **PNG** (three sizes) for office documents, slides and email.
+
+**Clear space and minimum size**
+
+- **Clear space:** X = half the height of the logo (`brand.clear-space` 0.5). Keep at least X of empty space on every side, for the symbol too. No text, images or edges inside that area.
+- **Minimum size:** primary logo 100px wide on screen (`brand.logo.min-width`) and 25mm in print (`brand.logo.min-width-print`). Symbol 24px tall on screen (`brand.symbol.min-height`) and 6mm in print (`brand.symbol.min-height-print`).
+- **Below 32px** (`brand.symbol.favicon-below`), use the favicon artwork. Its heavier line and wider gap stay legible at tiny sizes.
+
+**Sizes in the interface (inferred)**
+
+| Placement | Logo height | Token |
+|---|---|---|
+| Header, below 1024px | 20px | `brand.logo.height-header-mobile` |
+| Header, from 1024px | 24px | `brand.logo.height-header` |
+| Footer | 24px | `brand.logo.height-footer` |
+
+At these heights the logo is well above the 100px minimum width, and the header heights (80px and 100px) leave far more than the required clear space.
+
+**App icon and favicon** (`brand/02-App-Icon-and-Favicon/`)
+
+- The app icon is the reversed symbol on an Ink tile, with a corner radius of 22% of the tile's width (`brand.app-icon.radius`). Platforms that apply their own mask (iOS and Android) use the square version.
+- The favicon uses a heavier line and a wider gap so it stays readable at 16px.
+- The kit includes `favicon.ico`, `favicon.svg`, PNG favicons (16, 32 and 48px), `apple-touch-icon.png`, two large PNG icons for the web manifest, `site.webmanifest` and an HTML snippet. Set `theme-color` to Ink `#0b1220`.
+
+**Misuse: never**
+
+- stretch or squash the logo
+- rotate it
+- change its colours
+- add shadows, outlines or other effects
+- put it on busy or low-contrast backgrounds
+- retype the name in any font
+- place the symbol next to the name (a double P)
+- use the full-colour logo on a dark background (use `reversed`)
 
 ---
 
@@ -647,7 +704,7 @@ All components use semantic tokens only. States follow §2.4. Every interactive 
 
 - **Default and hover:** see §2.4. The primary fill inverts on hover (white with blue text) and the button scales to 1.05 over 200ms.
 - **Active:** scale 0.98.
-- **Focus:** 4px mint ring.
+- **Focus:** 4px Signal Blue ring, 2px offset.
 - **Disabled:** opacity 0.5, `cursor: not-allowed`, `aria-disabled="true"`, no hover.
 - **Loading:** keep the width, replace the label with a 20px spinner in currentColor, set `aria-busy="true"` and ignore clicks.
 - **Error:** buttons have no error state. Show the error next to the field or in an alert.
@@ -659,7 +716,7 @@ All components use semantic tokens only. States follow §2.4. Every interactive 
 
 ### 10.2 Links
 
-- **Inline (in body copy):** inherits the text colour with no underline at rest. On hover it turns `text.accent` `#006fee`. To make links findable without relying on colour, inline links in long-form text (docs and legal) **are underlined** at 1px with a 3px offset **(inferred)**.
+- **Inline (in body copy):** `text.accent` `#2563eb` (Signal Blue, per the brand), with a 1px underline appearing on hover. In long-form text (docs and legal) inline links **are always underlined** at 1px with a 4px offset **(inferred)**, so they are findable without relying on colour. On dark backgrounds links are `#7aa7ff`.
 - **Standalone link CTA:** the circle-arrow icon (28px) + text, 10px gap, scaling to 1.05 on hover.
 - **Navigation:** `body-s` (14px), `text.primary`, `text.accent` on hover, and `aria-current="page"` styled with `text.accent`.
 - **Visited:** no separate visited colour.
@@ -668,7 +725,7 @@ All components use semantic tokens only. States follow §2.4. Every interactive 
 
 ### 10.3 Navigation and header
 
-**Anatomy:** a logo on the left and navigation links on the right (gap 32px). An optional primary button (md) sits at the far right.
+**Anatomy:** the primary logo (full-colour on light headers, reversed on dark) on the left, 20px tall below 1024px and 24px from 1024px, then navigation links on the right (gap 32px). Never add the name as text next to the logo. An optional primary button (md) sits at the far right.
 
 - **Height:** 80px on mobile and 100px from `md`. Background `bg.canvas`.
 - **Sticky behaviour:** the header sticks to the top (`z.sticky`). Once the page scrolls it gains `shadow.1`, or a 1px `border.default` bottom border.
@@ -681,7 +738,7 @@ All components use semantic tokens only. States follow §2.4. Every interactive 
 
 **Anatomy:** a logo, then link columns, then an optional sign-up block, then a legal row.
 
-- Background `bg.surface` `#f2f2f2`. Top padding 108px on desktop and 72px on mobile, with 72px bottom padding.
+- Background `bg.surface` `#f4f6f8` (Paper). The full-colour primary logo sits at the top left, 24px tall (`brand.logo.height-footer`). Top padding 108px on desktop and 72px on mobile, with 72px bottom padding.
 - Column headings use `label`. Links use `body-m` in `text.primary`, with 16px between links. Columns are separated by the 24px gutter.
 - The legal row sits under a 1px `border.default` with 40px above it, in `caption` and `text.secondary`.
 - Social icons are 32px circles: `bg.inverse` with `text.inverse` icons, scaling to 1.08 on hover.
@@ -704,7 +761,7 @@ Three permitted heroes, using the visual language rather than any particular lay
 
 1. **Typographic hero.** On `bg.canvas`: a label, a `display` or `h1` headline (at most 15ch), a `body-l` lead (at most 50ch), then buttons. Padding 72px on mobile and 108px top / 140px bottom on desktop.
 2. **Media hero.** Full-bleed video or image on `bg.media`. A centred glass media button: `bg.overlay`, `radius.pill`, padding 8px 24px 8px 12px, a 48px play icon, `button-l` text, scaling to 1.05 on hover. Headline text over media only when contrast allows (§8.1).
-3. **Callout panel.** Directly below a media hero, overlapping it: `bg.brand` `#061e4d`, `radius.xl` 20px, padding 48px, max-width 796px, white `h5` text with a link CTA to the right. It stacks on mobile.
+3. **Callout panel.** Directly below a media hero, overlapping it: `bg.brand` `#2563eb` (Signal Blue), `radius.xl` 20px, padding 48px, max-width 796px, white `h5` text with a white link CTA to the right. Any logo inside it is the white version. It stacks on mobile. At most one per page (§2.3).
 
 - **Don't:** put a carousel in a hero, use more than two buttons, or set the headline in a weight other than 400.
 
@@ -719,7 +776,7 @@ Applies to all form fields:
 **Text input, textarea and select**
 - Height 52px (padding 13px 14px, `body-m` text, 1px border), `radius.sm` 4px, `bg.canvas`, 1px `border.input` `#7c899a`.
 - **Placeholder:** `text.tertiary`. A placeholder is never a replacement for the label.
-- **Hover:** `border.input-hover`. **Focus:** 4px mint ring, 2px offset, with the border unchanged.
+- **Hover:** `border.input-hover`. **Focus:** 4px Signal Blue ring, 2px offset, with the border unchanged.
 - **Error:** 1px `status.error.fg` border and text, `aria-invalid="true"`.
 - **Disabled:** `bg.subtle` background, `text.disabled` text, `cursor: not-allowed`.
 - **Loading** (async validation): a 16px spinner inside the field at the right, 14px from the edge.
@@ -730,7 +787,7 @@ Applies to all form fields:
 
 **Radio:** a 19px circle (`radius.circle`), 1px `border.control`. When selected: an `action.primary.bg` border and an 8px centre dot. Arrow keys move between options in a group.
 
-**Toggle (switch) (inferred):** a 44px × 24px track (`radius.pill`) with a 20px thumb. Off: track `slate.300`, white thumb. On: track `highlight` `#00e89d` with a `text.primary` icon or none, and the thumb moves right, 200ms `snap`. Use `role="switch"` with `aria-checked`. Use it only for settings that take effect immediately.
+**Toggle (switch) (inferred):** a 44px × 24px track (`radius.pill`) with a 20px thumb. Off: track `slate.300`, white thumb. On: track `highlight` `#2563eb` with a white thumb, and the thumb moves right, 200ms `snap`. Use `role="switch"` with `aria-checked`. Use it only for settings that take effect immediately.
 
 - **Do:** keep labels visible at all times, and validate on blur or submit.
 - **Don't:** use floating labels, validate while the user is still typing, or use red for anything except errors.
@@ -766,7 +823,7 @@ Applies to all form fields:
 
 ### 10.11 Badges and tags
 
-- `typography.label` (12px mono uppercase), padding 4px 10px, `radius.pill`.
+- `typography.label` (12px Space Grotesk 500, uppercase, +0.14em), padding 4px 10px, `radius.pill`.
 - **Variants:** neutral (`bg.surface` / `text.secondary`), success, warning, error and info (each `status.*.bg` with `status.*.fg`), and strong (`bg.inverse` / `text.inverse`).
 - **Removable tag:** a 16px close icon 4px after the label, with a 24px hit area.
 - **Don't:** make badges clickable unless they are filter chips. Filter chips use the secondary-button style at size sm.
@@ -805,7 +862,7 @@ The target is **WCAG 2.2 AA** at minimum.
 - UI components and meaningful icons need 3:1 against their background. This is why inputs use `border.input` `#7c899a` (3.56:1).
 
 **Focus**
-- Every interactive element shows the focus ring on `:focus-visible`: a 4px `#00e89d` solid outline with a 2px offset. Never remove it with `outline: none` unless you replace it with the same ring.
+- Every interactive element shows the focus ring on `:focus-visible`: a 4px Signal Blue (`#2563eb`; `#7aa7ff` on dark backgrounds) solid outline with a 2px offset. On a Signal Blue button the 2px offset leaves a white gap, so the ring stays visible. Never remove it with `outline: none` unless you replace it with the same ring.
 - The ring must never be clipped. Leave clear space equal to the 4px ring plus its 2px offset around the element, or avoid `overflow: hidden` on its parent.
 - Focus order follows reading order. Never use a positive `tabindex`.
 
@@ -856,17 +913,17 @@ The target is **WCAG 2.2 AA** at minimum.
 
 | # | Do | Don't |
 |---|---|---|
-| 1 | Set headings in weight 400 and create hierarchy with size | Make headings bold (600 or 700) to make them stand out |
-| 2 | Use the letter-spacing token for each style (−0.04em for headings) | Leave large headings at default 0 tracking |
-| 3 | Use `#006fee` (`text.accent`) for link hover on light backgrounds | Use `#0077ff` for normal-size text on white (4.13:1 fails AA) |
+| 1 | Set every heading in Space Grotesk 600 and create hierarchy with size | Mix heading weights, or set headings in Inter |
+| 2 | Use the letter-spacing token for each style (−0.02em for H1–H3) | Leave large headings at default 0 tracking, or space uppercase labels by less than +0.14em |
+| 3 | Use Signal Blue Light `#7aa7ff` for links and accents on Ink | Use Signal Blue Light on white (2.39:1, and against the brand rules) |
 | 4 | Keep blue for actions and links only | Use blue for decorative headings, icons or backgrounds |
 | 5 | Use one filled primary button per screen | Put two primary buttons next to each other |
 | 6 | Use pills (`radius.pill`) for every button | Use square or slightly rounded buttons |
 | 7 | Separate content with surface colour and space | Add shadows to cards or sections |
 | 8 | Use `shadow.2` and `shadow.3` only for floating layers (menus, toasts, modals) | Use shadows to suggest something is clickable |
-| 9 | Show the 4px mint focus ring on `:focus-visible` | Remove outlines or use a thin browser-default ring |
-| 10 | Use the mint `#00e89d` for focus and data highlights | Use mint for text on white (1.61:1) |
-| 11 | Put mono uppercase labels above headings as eyebrows | Set paragraphs or headings in mono, or uppercase in sans |
+| 9 | Show the 4px Signal Blue focus ring on `:focus-visible` | Remove outlines or use a thin browser-default ring |
+| 10 | Use the supplied logo files in the right colour version for the background (§8.5) | Retype the name, recolour, stretch, rotate or add effects to the logo |
+| 11 | Put Space Grotesk uppercase eyebrows above headings | Set paragraphs in Space Grotesk, or anything in Inter uppercase |
 | 12 | Keep body text to 70ch and headlines to 20ch | Let text run the full width of a 1224px container |
 | 13 | Use only `space.*` values (16, 24, 32, 40 …) | Invent in-between values that are not on the scale |
 | 14 | Use 72px (mobile) and 108px (desktop) section padding | Cram sections together with 24–40px gaps |
@@ -891,19 +948,23 @@ The target is **WCAG 2.2 AA** at minimum.
   ```
   and still import `tokens.css`, because the semantic colours (`bg-canvas`, `text-primary`, `border-input`) and dark mode read its CSS variables. The preset **replaces** Tailwind's default colours, spacing and radii, so only token values are available.
 
-**Step 3. Set up the fonts.** Self-host DM Sans and IBM Plex Mono (or the licensed GT Walsheim and Simplon Mono):
+**Step 3. Set up the fonts.** Convert the brand TTFs in `brand/04-Fonts/` to WOFF2 (or download them from Google Fonts), self-host them, and declare:
 ```css
-@font-face { font-family: "DM Sans"; src: url("/fonts/DMSans-Variable.woff2") format("woff2"); font-weight: 100 1000; font-display: swap; }
-@font-face { font-family: "IBM Plex Mono"; src: url("/fonts/IBMPlexMono-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Space Grotesk"; src: url("/fonts/SpaceGrotesk-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Space Grotesk"; src: url("/fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Inter"; src: url("/fonts/Inter-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 body { font-family: var(--font-family-sans); font-size: var(--type-body-m-size); line-height: var(--type-body-m-line-height); letter-spacing: var(--type-body-m-letter-spacing); color: var(--color-text-primary); background: var(--color-bg-canvas); }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-family-display); font-weight: var(--font-weight-semibold); }
 ```
-If you have the licensed fonts, put `"GT Walsheim"` first in `font.family.sans` (and `"Simplon Mono"` in `font.family.mono`) in `tokens.json`, then run step 5.
+Add the logo, favicon and app icon from `brand/01-Logo/` and `brand/02-App-Icon-and-Favicon/` (§8.5). On a site served from a sub-folder, use relative paths in the favicon snippet.
 
-**Step 4. Map the brand colour into the roles.**
+**Step 4. Map the brand colour into the roles.** This system already applies the PRINCIPIA brand. Follow these steps only for a different brand or sub-brand:
 1. Add the brand colour as a primitive ramp in `tokens.json` (for example `color.brand.600`).
 2. Point `semantic.light.action.primary.bg`, `text.accent` and `action.primary.fg-hover` at it. Pick a darker step for `bg-pressed`.
 3. Check the new pairs against the thresholds in §2.5: white on the brand fill must reach 4.5:1, and brand text on white must reach 4.5:1. If it doesn't, use a darker step for those roles and keep the brighter one for large text and icons.
-4. Keep `focus.ring` at `#00e89d`, unless the brand colour is green. In that case choose a focus colour with at least 3:1 against both the canvas and the brand fill.
+4. Point `focus.ring` at the brand's accent if it reaches 3:1 against the canvas (PRINCIPIA's Signal Blue reaches 5.17:1). Otherwise choose a focus colour that does.
 5. Add the new pairs and their ratios to §2.5.
 
 **Step 5. Rebuild and verify.**
@@ -928,23 +989,28 @@ Each item passes or fails. A page ships only when every item passes.
 **Colour**
 - [ ] Only semantic tokens are used in components; there are no hard-coded hex values.
 - [ ] Every text and background pair appears in §2.5 and meets AA.
-- [ ] Blue appears only on actions and links, and covers less than 10% of the screen.
-- [ ] Mint is used only for focus and data highlights, and never as text on light backgrounds.
+- [ ] Signal Blue appears only on actions, links, focus, selected states and the logo node, and covers about 5% of the screen.
+- [ ] Signal Blue Light `#7aa7ff` appears only on dark backgrounds.
 - [ ] Dark mode (if supported) uses the dark semantic values and passes contrast.
 
 **Typography**
-- [ ] Only DM Sans or GT Walsheim, and IBM Plex Mono or Simplon Mono, are loaded.
+- [ ] Only Space Grotesk (500, 600), Inter (400, 500, 600) and, for code, IBM Plex Mono are loaded.
 - [ ] Every text element uses a `typography.*` style; there are no ad-hoc sizes.
-- [ ] Headings are weight 400 with their token letter-spacing.
+- [ ] Headings are Space Grotesk 600 with their token letter-spacing.
 - [ ] At most three type levels and one H1 or display appear per viewport.
 - [ ] Body text is at most 70ch, leads 50ch and headlines 20ch.
-- [ ] Mono is used only for labels, data and code; uppercase only in mono labels.
+- [ ] Uppercase appears only in Space Grotesk eyebrows and labels, at +0.14em; IBM Plex Mono only in code.
 
 **Layout and spacing**
 - [ ] Margins are 36, 54 or 108px for the breakpoint, and content is capped at 1224px.
 - [ ] Section padding is 72px on mobile and 108px on desktop (140px for major sections).
 - [ ] Every margin, padding and gap is a `space.*` value.
 - [ ] Text is left-aligned, except short centred hero statements.
+
+**Logo**
+- [ ] The logo is a supplied file (never retyped), in the right colour version for its background, with clear space of half its height on every side.
+- [ ] The primary logo is at least 100px wide; the symbol at least 24px tall; below 32px the favicon artwork is used.
+- [ ] The symbol never appears next to the primary logo or the name-only version.
 
 **Shape, elevation and imagery**
 - [ ] Buttons and badges are pills, cards are 16px, panels and modals 20px, inputs 4px.
@@ -959,7 +1025,7 @@ Each item passes or fails. A page ships only when every item passes.
 - [ ] Reduced motion turns off reveals, scaling and autoplay.
 
 **Accessibility**
-- [ ] The 4px mint focus ring is visible and unclipped on every interactive element.
+- [ ] The 4px Signal Blue focus ring is visible and unclipped on every interactive element.
 - [ ] Hit areas are at least 24px (44px for primary and touch controls).
 - [ ] Every flow can be completed with the keyboard alone; overlays trap focus and close with Escape.
 - [ ] There is a skip link, landmarks, ordered headings, labelled icon buttons and image alt text.
@@ -974,7 +1040,7 @@ Each item passes or fails. A page ships only when every item passes.
 
 ## 16. Versioning
 
-**Current version: 1.0.0**
+**Current version: 2.0.0**
 
 The system follows semantic versioning (`MAJOR.MINOR.PATCH`):
 - **MAJOR**: a token is removed or renamed, or a value changes in a way that alters existing designs (for example a new type scale).
@@ -985,10 +1051,17 @@ The system follows semantic versioning (`MAJOR.MINOR.PATCH`):
 
 ### Changelog
 
+#### 2.0.0 (2026-11-24)
+- Applied the PRINCIPIA brand (`brand/PRINCIPIA-Brand-Guidelines.pdf`, v1.0).
+- Colour: PRINCIPIA Ink `#0b1220`, Signal Blue `#2563eb`, Signal Blue Light `#7aa7ff`, Paper `#f4f6f8` and Slate `#4b5563` replace the reference colours. The focus ring and highlight are now Signal Blue. The callout surface (`bg.brand`) is Signal Blue. Usage ratio is the brand's 70 / 25 / 5.
+- Type: Space Grotesk (headings, eyebrows, labels) and Inter (text, UI, buttons) replace DM Sans; IBM Plex Mono is now for code only. Headings are SemiBold 600, labels Medium 500 with +0.14em tracking, and tracking is adjusted for the new fonts. Added the `eyebrow` style and `font.family.display`; replaced `font.weight.bold` (700) with `font.weight.semibold` (600).
+- Added §8.5 Logo, the `brand.*` tokens (minimum sizes, clear space, app-icon radius) and the `logo.ink` and `logo.node` roles.
+- Removed tokens: `color.gray.100`, `color.slate.950`, `color.blue.400`, `.500`, `.800`, `.850`, `.900`, `color.green.400`, `color.teal.600`.
+
 #### 1.0.0 (2026-11-24)
 - First complete release: sections 1–16, `tokens.json` (W3C Design Tokens format), the generated `tokens.css` and `tailwind.preset.js`, and the build and check scripts.
 - Type scale, colour, spacing, radii, shadows and motion measured from the reference implementation at four viewport widths, from phone to wide desktop. Inferred values are marked.
-- Deliberate deviation from the reference: accent text on light backgrounds uses `#006fee` instead of `#0077ff`, to meet WCAG AA.
+- Deliberate deviation from the reference: accent text on light backgrounds used a darker action blue instead of the reference's brighter link blue, to meet WCAG AA.
 - Open-source fonts (DM Sans and IBM Plex Mono) are the default, with the licensed GT Walsheim and Simplon Mono as options.
 
 #### 0.1.0 (2026-11-24)

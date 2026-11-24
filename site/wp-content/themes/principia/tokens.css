@@ -1,0 +1,653 @@
+/* Design system tokens v2.0.0. Generated from tokens.json by scripts/build.mjs. Do not edit by hand. */
+
+:root {
+  --color-ink-600: #4b5563;
+  --color-ink-900: #0b1220;
+  --color-paper: #f4f6f8;
+  --color-slate-50: #fafafb;
+  --color-slate-100: #f4f6f9;
+  --color-slate-200: #e5e9f0;
+  --color-slate-300: #ccd3dc;
+  --color-slate-400: #a2abb9;
+  --color-slate-450: #949a9f;
+  --color-slate-500: #7c899a;
+  --color-slate-600: #5d6e83;
+  --color-slate-700: #43546a;
+  --color-slate-800: #2e3d4f;
+  --color-slate-850: #1f2a39;
+  --color-slate-900: #132237;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-blue-50: #eaf3ff;
+  --color-blue-300: #7aa7ff;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-green-50: #e6fcf5;
+  --color-green-300: #34d399;
+  --color-green-700: #00704a;
+  --color-red-50: #fdecec;
+  --color-red-300: #ff5c5c;
+  --color-red-600: #ea0000;
+  --color-red-700: #c40000;
+  --color-amber-50: #fff4e5;
+  --color-amber-300: #ffb547;
+  --color-amber-700: #8f4b00;
+  --color-alpha-overlay: #00000080;
+  --color-alpha-shadow-1: #0000000a;
+  --color-alpha-shadow-2: #0b12201a;
+  --color-alpha-shadow-3: #00000066;
+  --font-family-display: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-family-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 1024px;
+  --breakpoint-lg: 1440px;
+  --layout-container-max: 1224px;
+  --layout-margin-mobile: 36px;
+  --layout-margin-tablet: 54px;
+  --layout-margin-desktop: 108px;
+  --layout-gutter-mobile: 16px;
+  --layout-gutter-tablet: 24px;
+  --layout-gutter-desktop: 24px;
+  --layout-columns-mobile: 4;
+  --layout-columns-tablet: 8;
+  --layout-columns-desktop: 12;
+  --layout-header-height-mobile: 80px;
+  --layout-header-height-desktop: 100px;
+  --layout-section-sm: 54px;
+  --layout-section-md: 72px;
+  --layout-section-lg: 108px;
+  --layout-section-xl: 140px;
+  --layout-measure-body: 70ch;
+  --layout-measure-lead: 50ch;
+  --layout-measure-heading: 20ch;
+  --layout-measure-display: 15ch;
+  --layout-measure-display-tight: 10ch;
+  --space-0: 0px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-54: 54px;
+  --space-72: 72px;
+  --space-108: 108px;
+  --space-140: 140px;
+  --radius-none: 0px;
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-pill: 1000px;
+  --radius-circle: 50%;
+  --border-width-hairline: 1px;
+  --border-width-thick: 2px;
+  --border-width-focus: 4px;
+  --border-focus-offset: 2px;
+  --shadow-0: none;
+  --shadow-1: 0px 1px 3px 0px #0000000a;
+  --shadow-2: 0px 4px 12px 0px #0b12201a;
+  --shadow-3: 0px 4px 16px 0px #00000066;
+  --opacity-disabled: 0.5;
+  --opacity-muted: 0.6;
+  --scale-hover: 1.05;
+  --scale-hover-large: 1.03;
+  --scale-hover-small: 1.08;
+  --scale-press: 0.98;
+  --motion-duration-instant: 100ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 200ms;
+  --motion-duration-moderate: 300ms;
+  --motion-duration-slow: 400ms;
+  --motion-duration-reveal: 600ms;
+  --motion-duration-reveal-long: 800ms;
+  --motion-duration-counter: 1500ms;
+  --motion-duration-toast-dismiss: 5000ms;
+  --motion-delay-stagger: 300ms;
+  --motion-easing-standard: cubic-bezier(0.17, 0.17, 0.34, 1);
+  --motion-easing-decelerate: cubic-bezier(0.17, 0.17, 0.1, 1);
+  --motion-easing-emphasized: cubic-bezier(0.9, 0, 0.1, 1);
+  --motion-easing-snap: cubic-bezier(0.2, 0, 0, 1);
+  --motion-easing-spring: cubic-bezier(0.835, 0.255, 0.17, 1.605);
+  --motion-easing-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --motion-easing-out: cubic-bezier(0, 0, 0.58, 1);
+  --motion-easing-in: cubic-bezier(0.42, 0, 1, 1);
+  --motion-distance-reveal: 24px;
+  --icon-size-xs: 16px;
+  --icon-size-sm: 20px;
+  --icon-size-md: 24px;
+  --icon-size-lg: 28px;
+  --icon-size-xl: 32px;
+  --icon-size-2xl: 48px;
+  --icon-stroke: 2px;
+  --aspect-video: 16/9;
+  --aspect-square: 1/1;
+  --aspect-wide: 2/1;
+  --aspect-portrait: 4/5;
+  --aspect-banner: 10/3;
+  --z-base: 0;
+  --z-sticky: 50;
+  --z-dropdown: 100;
+  --z-overlay: 900;
+  --z-modal: 1000;
+  --z-toast: 1100;
+  --a11y-target-min: 24px;
+  --a11y-target-comfortable: 44px;
+  --a11y-large-text: 24px;
+  --a11y-large-text-bold: 18.66px;
+  --brand-logo-min-width: 100px;
+  --brand-logo-min-width-print: 25mm;
+  --brand-logo-height-header-mobile: 20px;
+  --brand-logo-height-header: 24px;
+  --brand-logo-height-footer: 24px;
+  --brand-symbol-min-height: 24px;
+  --brand-symbol-min-height-print: 6mm;
+  --brand-symbol-favicon-below: 32px;
+  --brand-app-icon-radius: 22%;
+  --brand-clear-space: 0.5;
+  --component-button-height-sm: 32px;
+  --component-button-height-md: 40px;
+  --component-button-height-lg: 56px;
+  --component-button-padding-x-sm: 16px;
+  --component-button-padding-x-md: 24px;
+  --component-button-padding-x-lg: 32px;
+  --component-button-padding-y-sm: 4px;
+  --component-button-padding-y-md: 8px;
+  --component-button-padding-y-lg: 16px;
+  --component-button-gap: 10px;
+  --component-button-media-padding-left: 12px;
+  --component-input-padding-y: 13px;
+  --component-input-padding-x: 14px;
+  --component-input-height: 52px;
+  --component-checkbox-size: 19px;
+  --component-toggle-width: 44px;
+  --component-toggle-height: 24px;
+  --component-toggle-thumb: 20px;
+  --component-card-padding: 32px;
+  --component-card-padding-mobile: 24px;
+  --component-callout-padding: 48px;
+  --component-callout-max-width: 796px;
+  --component-modal-padding: 48px;
+  --component-modal-max-width: 640px;
+  --component-badge-padding-y: 4px;
+  --component-badge-padding-x: 10px;
+  --component-tooltip-padding-y: 8px;
+  --component-tooltip-padding-x: 12px;
+  --component-tooltip-max-width: 280px;
+  --component-nav-gap: 32px;
+  --component-toast-max-width: 400px;
+
+  /* Semantic roles: light mode (default) */
+  --color-bg-canvas: var(--color-white);
+  --color-bg-surface: var(--color-paper);
+  --color-bg-subtle: var(--color-slate-100);
+  --color-bg-inverse: var(--color-ink-900);
+  --color-bg-brand: var(--color-blue-600);
+  --color-bg-media: var(--color-black);
+  --color-bg-overlay: var(--color-alpha-overlay);
+  --color-text-primary: var(--color-ink-900);
+  --color-text-secondary: var(--color-ink-600);
+  --color-text-tertiary: var(--color-slate-600);
+  --color-text-disabled: var(--color-slate-450);
+  --color-text-inverse: var(--color-white);
+  --color-text-accent: var(--color-blue-600);
+  --color-text-on-action: var(--color-white);
+  --color-action-primary-bg: var(--color-blue-600);
+  --color-action-primary-bg-hover: var(--color-white);
+  --color-action-primary-fg-hover: var(--color-blue-600);
+  --color-action-primary-bg-pressed: var(--color-blue-700);
+  --color-action-secondary-border: var(--color-ink-900);
+  --color-action-destructive-bg: var(--color-red-600);
+  --color-action-destructive-bg-hover: var(--color-red-700);
+  --color-border-default: var(--color-slate-200);
+  --color-border-strong: var(--color-slate-450);
+  --color-border-input: var(--color-slate-500);
+  --color-border-input-hover: var(--color-slate-600);
+  --color-border-control: var(--color-slate-600);
+  --color-focus-ring: var(--color-blue-600);
+  --color-highlight: var(--color-blue-600);
+  --color-status-success-fg: var(--color-green-700);
+  --color-status-success-bg: var(--color-green-50);
+  --color-status-warning-fg: var(--color-amber-700);
+  --color-status-warning-bg: var(--color-amber-50);
+  --color-status-error-fg: var(--color-red-600);
+  --color-status-error-fg-strong: var(--color-red-700);
+  --color-status-error-bg: var(--color-red-50);
+  --color-status-info-fg: var(--color-blue-600);
+  --color-status-info-bg: var(--color-blue-50);
+  --color-logo-node: var(--color-blue-600);
+  --color-logo-ink: var(--color-ink-900);
+
+  /* Typography: mobile (below breakpoint-sm) */
+  --type-display-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-display-size: 80px;
+  --type-display-line-height: 84px;
+  --type-display-weight: 600;
+  --type-display-letter-spacing: -0.03em;
+  --type-display-number-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-display-number-size: 72px;
+  --type-display-number-line-height: 72px;
+  --type-display-number-weight: 600;
+  --type-display-number-letter-spacing: -0.03em;
+  --type-h1-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h1-size: 45px;
+  --type-h1-line-height: 45px;
+  --type-h1-weight: 600;
+  --type-h1-letter-spacing: -0.02em;
+  --type-h2-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h2-size: 31px;
+  --type-h2-line-height: 34.1px;
+  --type-h2-weight: 600;
+  --type-h2-letter-spacing: -0.02em;
+  --type-h3-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h3-size: 30px;
+  --type-h3-line-height: 36px;
+  --type-h3-weight: 600;
+  --type-h3-letter-spacing: -0.02em;
+  --type-h4-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h4-size: 30px;
+  --type-h4-line-height: 31.5px;
+  --type-h4-weight: 600;
+  --type-h4-letter-spacing: -0.01em;
+  --type-h5-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h5-size: 24px;
+  --type-h5-line-height: 26.4px;
+  --type-h5-weight: 600;
+  --type-h5-letter-spacing: -0.01em;
+  --type-h6-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-h6-size: 18px;
+  --type-h6-line-height: 19.8px;
+  --type-h6-weight: 600;
+  --type-h6-letter-spacing: -0.01em;
+  --type-body-l-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --type-body-l-size: 20px;
+  --type-body-l-line-height: 28px;
+  --type-body-l-weight: 400;
+  --type-body-l-letter-spacing: -0.01em;
+  --type-body-m-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --type-body-m-size: 16px;
+  --type-body-m-line-height: 24px;
+  --type-body-m-weight: 400;
+  --type-body-m-letter-spacing: -0.01em;
+  --type-body-s-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --type-body-s-size: 14px;
+  --type-body-s-line-height: 21px;
+  --type-body-s-weight: 400;
+  --type-body-s-letter-spacing: -0.01em;
+  --type-caption-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --type-caption-size: 12px;
+  --type-caption-line-height: 13.2px;
+  --type-caption-weight: 400;
+  --type-caption-letter-spacing: 0em;
+  --type-eyebrow-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-eyebrow-size: 12px;
+  --type-eyebrow-line-height: 18px;
+  --type-eyebrow-weight: 600;
+  --type-eyebrow-letter-spacing: 0.14em;
+  --type-label-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-label-size: 12px;
+  --type-label-line-height: 18px;
+  --type-label-weight: 500;
+  --type-label-letter-spacing: 0.14em;
+  --type-label-l-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-label-l-size: 16px;
+  --type-label-l-line-height: 28px;
+  --type-label-l-weight: 500;
+  --type-label-l-letter-spacing: 0.14em;
+  --type-button-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --type-button-size: 16px;
+  --type-button-line-height: 24px;
+  --type-button-weight: 500;
+  --type-button-letter-spacing: -0.01em;
+  --type-button-l-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-button-l-size: 24px;
+  --type-button-l-line-height: 26.4px;
+  --type-button-l-weight: 600;
+  --type-button-l-letter-spacing: -0.01em;
+  --type-nav-mobile-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --type-nav-mobile-size: 40px;
+  --type-nav-mobile-line-height: 46px;
+  --type-nav-mobile-weight: 600;
+  --type-nav-mobile-letter-spacing: -0.02em;
+  --type-code-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --type-code-size: 14px;
+  --type-code-line-height: 21px;
+  --type-code-weight: 400;
+  --type-code-letter-spacing: 0em;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --type-display-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-display-size: 128px;
+    --type-display-line-height: 140.8px;
+    --type-display-weight: 600;
+    --type-display-letter-spacing: -0.03em;
+    --type-display-number-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-display-number-size: 72px;
+    --type-display-number-line-height: 72px;
+    --type-display-number-weight: 600;
+    --type-display-number-letter-spacing: -0.03em;
+    --type-h1-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h1-size: 63px;
+    --type-h1-line-height: 63px;
+    --type-h1-weight: 600;
+    --type-h1-letter-spacing: -0.02em;
+    --type-h2-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h2-size: 50px;
+    --type-h2-line-height: 55px;
+    --type-h2-weight: 600;
+    --type-h2-letter-spacing: -0.02em;
+    --type-h3-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h3-size: 40px;
+    --type-h3-line-height: 48px;
+    --type-h3-weight: 600;
+    --type-h3-letter-spacing: -0.02em;
+    --type-h4-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h4-size: 30px;
+    --type-h4-line-height: 31.5px;
+    --type-h4-weight: 600;
+    --type-h4-letter-spacing: -0.01em;
+    --type-h5-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h5-size: 24px;
+    --type-h5-line-height: 26.4px;
+    --type-h5-weight: 600;
+    --type-h5-letter-spacing: -0.01em;
+    --type-h6-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-h6-size: 18px;
+    --type-h6-line-height: 19.8px;
+    --type-h6-weight: 600;
+    --type-h6-letter-spacing: -0.01em;
+    --type-body-l-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --type-body-l-size: 24px;
+    --type-body-l-line-height: 36px;
+    --type-body-l-weight: 400;
+    --type-body-l-letter-spacing: -0.01em;
+    --type-body-m-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --type-body-m-size: 16px;
+    --type-body-m-line-height: 24px;
+    --type-body-m-weight: 400;
+    --type-body-m-letter-spacing: -0.01em;
+    --type-body-s-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --type-body-s-size: 14px;
+    --type-body-s-line-height: 21px;
+    --type-body-s-weight: 400;
+    --type-body-s-letter-spacing: -0.01em;
+    --type-caption-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --type-caption-size: 12px;
+    --type-caption-line-height: 13.2px;
+    --type-caption-weight: 400;
+    --type-caption-letter-spacing: 0em;
+    --type-eyebrow-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-eyebrow-size: 12px;
+    --type-eyebrow-line-height: 18px;
+    --type-eyebrow-weight: 600;
+    --type-eyebrow-letter-spacing: 0.14em;
+    --type-label-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-label-size: 12px;
+    --type-label-line-height: 18px;
+    --type-label-weight: 500;
+    --type-label-letter-spacing: 0.14em;
+    --type-label-l-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-label-l-size: 16px;
+    --type-label-l-line-height: 28px;
+    --type-label-l-weight: 500;
+    --type-label-l-letter-spacing: 0.14em;
+    --type-button-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --type-button-size: 16px;
+    --type-button-line-height: 24px;
+    --type-button-weight: 500;
+    --type-button-letter-spacing: -0.01em;
+    --type-button-l-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --type-button-l-size: 24px;
+    --type-button-l-line-height: 26.4px;
+    --type-button-l-weight: 600;
+    --type-button-l-letter-spacing: -0.01em;
+    --type-code-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --type-code-size: 14px;
+    --type-code-line-height: 21px;
+    --type-code-weight: 400;
+    --type-code-letter-spacing: 0em;
+  }
+}
+
+/* Semantic roles: dark mode. Set data-theme="dark" on <html>, or follow the OS when no theme is set. */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg-canvas: var(--color-ink-900);
+  --color-bg-surface: var(--color-slate-900);
+  --color-bg-subtle: var(--color-slate-850);
+  --color-bg-inverse: var(--color-white);
+  --color-bg-brand: var(--color-blue-600);
+  --color-bg-media: var(--color-black);
+  --color-bg-overlay: var(--color-alpha-overlay);
+  --color-text-primary: var(--color-white);
+  --color-text-secondary: var(--color-slate-400);
+  --color-text-tertiary: var(--color-slate-500);
+  --color-text-disabled: var(--color-slate-600);
+  --color-text-inverse: var(--color-ink-900);
+  --color-text-accent: var(--color-blue-300);
+  --color-text-on-action: var(--color-white);
+  --color-action-primary-bg: var(--color-blue-600);
+  --color-action-primary-bg-hover: var(--color-ink-900);
+  --color-action-primary-fg-hover: var(--color-blue-300);
+  --color-action-primary-bg-pressed: var(--color-blue-700);
+  --color-action-secondary-border: var(--color-white);
+  --color-action-destructive-bg: var(--color-red-600);
+  --color-action-destructive-bg-hover: var(--color-red-700);
+  --color-border-default: var(--color-slate-800);
+  --color-border-strong: var(--color-slate-700);
+  --color-border-input: var(--color-slate-500);
+  --color-border-input-hover: var(--color-slate-400);
+  --color-border-control: var(--color-slate-400);
+  --color-focus-ring: var(--color-blue-300);
+  --color-highlight: var(--color-blue-300);
+  --color-status-success-fg: var(--color-green-300);
+  --color-status-success-bg: var(--color-slate-900);
+  --color-status-warning-fg: var(--color-amber-300);
+  --color-status-warning-bg: var(--color-slate-900);
+  --color-status-error-fg: var(--color-red-300);
+  --color-status-error-fg-strong: var(--color-red-300);
+  --color-status-error-bg: var(--color-slate-900);
+  --color-status-info-fg: var(--color-blue-300);
+  --color-status-info-bg: var(--color-slate-900);
+  --color-logo-node: var(--color-blue-300);
+  --color-logo-ink: var(--color-white);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --color-bg-canvas: var(--color-ink-900);
+    --color-bg-surface: var(--color-slate-900);
+    --color-bg-subtle: var(--color-slate-850);
+    --color-bg-inverse: var(--color-white);
+    --color-bg-brand: var(--color-blue-600);
+    --color-bg-media: var(--color-black);
+    --color-bg-overlay: var(--color-alpha-overlay);
+    --color-text-primary: var(--color-white);
+    --color-text-secondary: var(--color-slate-400);
+    --color-text-tertiary: var(--color-slate-500);
+    --color-text-disabled: var(--color-slate-600);
+    --color-text-inverse: var(--color-ink-900);
+    --color-text-accent: var(--color-blue-300);
+    --color-text-on-action: var(--color-white);
+    --color-action-primary-bg: var(--color-blue-600);
+    --color-action-primary-bg-hover: var(--color-ink-900);
+    --color-action-primary-fg-hover: var(--color-blue-300);
+    --color-action-primary-bg-pressed: var(--color-blue-700);
+    --color-action-secondary-border: var(--color-white);
+    --color-action-destructive-bg: var(--color-red-600);
+    --color-action-destructive-bg-hover: var(--color-red-700);
+    --color-border-default: var(--color-slate-800);
+    --color-border-strong: var(--color-slate-700);
+    --color-border-input: var(--color-slate-500);
+    --color-border-input-hover: var(--color-slate-400);
+    --color-border-control: var(--color-slate-400);
+    --color-focus-ring: var(--color-blue-300);
+    --color-highlight: var(--color-blue-300);
+    --color-status-success-fg: var(--color-green-300);
+    --color-status-success-bg: var(--color-slate-900);
+    --color-status-warning-fg: var(--color-amber-300);
+    --color-status-warning-bg: var(--color-slate-900);
+    --color-status-error-fg: var(--color-red-300);
+    --color-status-error-fg-strong: var(--color-red-300);
+    --color-status-error-bg: var(--color-slate-900);
+    --color-status-info-fg: var(--color-blue-300);
+    --color-status-info-bg: var(--color-slate-900);
+    --color-logo-node: var(--color-blue-300);
+    --color-logo-ink: var(--color-white);
+  }
+}
+
+/* Type styles */
+.type-display {
+  font-family: var(--type-display-family);
+  font-size: var(--type-display-size);
+  line-height: var(--type-display-line-height);
+  font-weight: var(--type-display-weight);
+  letter-spacing: var(--type-display-letter-spacing);
+}
+.type-display-number {
+  font-family: var(--type-display-number-family);
+  font-size: var(--type-display-number-size);
+  line-height: var(--type-display-number-line-height);
+  font-weight: var(--type-display-number-weight);
+  letter-spacing: var(--type-display-number-letter-spacing);
+}
+.type-h1 {
+  font-family: var(--type-h1-family);
+  font-size: var(--type-h1-size);
+  line-height: var(--type-h1-line-height);
+  font-weight: var(--type-h1-weight);
+  letter-spacing: var(--type-h1-letter-spacing);
+}
+.type-h2 {
+  font-family: var(--type-h2-family);
+  font-size: var(--type-h2-size);
+  line-height: var(--type-h2-line-height);
+  font-weight: var(--type-h2-weight);
+  letter-spacing: var(--type-h2-letter-spacing);
+}
+.type-h3 {
+  font-family: var(--type-h3-family);
+  font-size: var(--type-h3-size);
+  line-height: var(--type-h3-line-height);
+  font-weight: var(--type-h3-weight);
+  letter-spacing: var(--type-h3-letter-spacing);
+}
+.type-h4 {
+  font-family: var(--type-h4-family);
+  font-size: var(--type-h4-size);
+  line-height: var(--type-h4-line-height);
+  font-weight: var(--type-h4-weight);
+  letter-spacing: var(--type-h4-letter-spacing);
+}
+.type-h5 {
+  font-family: var(--type-h5-family);
+  font-size: var(--type-h5-size);
+  line-height: var(--type-h5-line-height);
+  font-weight: var(--type-h5-weight);
+  letter-spacing: var(--type-h5-letter-spacing);
+}
+.type-h6 {
+  font-family: var(--type-h6-family);
+  font-size: var(--type-h6-size);
+  line-height: var(--type-h6-line-height);
+  font-weight: var(--type-h6-weight);
+  letter-spacing: var(--type-h6-letter-spacing);
+}
+.type-body-l {
+  font-family: var(--type-body-l-family);
+  font-size: var(--type-body-l-size);
+  line-height: var(--type-body-l-line-height);
+  font-weight: var(--type-body-l-weight);
+  letter-spacing: var(--type-body-l-letter-spacing);
+}
+.type-body-m {
+  font-family: var(--type-body-m-family);
+  font-size: var(--type-body-m-size);
+  line-height: var(--type-body-m-line-height);
+  font-weight: var(--type-body-m-weight);
+  letter-spacing: var(--type-body-m-letter-spacing);
+}
+.type-body-s {
+  font-family: var(--type-body-s-family);
+  font-size: var(--type-body-s-size);
+  line-height: var(--type-body-s-line-height);
+  font-weight: var(--type-body-s-weight);
+  letter-spacing: var(--type-body-s-letter-spacing);
+}
+.type-caption {
+  font-family: var(--type-caption-family);
+  font-size: var(--type-caption-size);
+  line-height: var(--type-caption-line-height);
+  font-weight: var(--type-caption-weight);
+  letter-spacing: var(--type-caption-letter-spacing);
+}
+.type-eyebrow {
+  font-family: var(--type-eyebrow-family);
+  font-size: var(--type-eyebrow-size);
+  line-height: var(--type-eyebrow-line-height);
+  font-weight: var(--type-eyebrow-weight);
+  letter-spacing: var(--type-eyebrow-letter-spacing);
+  text-transform: uppercase;
+}
+.type-label {
+  font-family: var(--type-label-family);
+  font-size: var(--type-label-size);
+  line-height: var(--type-label-line-height);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-letter-spacing);
+  text-transform: uppercase;
+}
+.type-label-l {
+  font-family: var(--type-label-l-family);
+  font-size: var(--type-label-l-size);
+  line-height: var(--type-label-l-line-height);
+  font-weight: var(--type-label-l-weight);
+  letter-spacing: var(--type-label-l-letter-spacing);
+  text-transform: uppercase;
+}
+.type-button {
+  font-family: var(--type-button-family);
+  font-size: var(--type-button-size);
+  line-height: var(--type-button-line-height);
+  font-weight: var(--type-button-weight);
+  letter-spacing: var(--type-button-letter-spacing);
+}
+.type-button-l {
+  font-family: var(--type-button-l-family);
+  font-size: var(--type-button-l-size);
+  line-height: var(--type-button-l-line-height);
+  font-weight: var(--type-button-l-weight);
+  letter-spacing: var(--type-button-l-letter-spacing);
+}
+.type-nav-mobile {
+  font-family: var(--type-nav-mobile-family);
+  font-size: var(--type-nav-mobile-size);
+  line-height: var(--type-nav-mobile-line-height);
+  font-weight: var(--type-nav-mobile-weight);
+  letter-spacing: var(--type-nav-mobile-letter-spacing);
+}
+.type-code {
+  font-family: var(--type-code-family);
+  font-size: var(--type-code-size);
+  line-height: var(--type-code-line-height);
+  font-weight: var(--type-code-weight);
+  letter-spacing: var(--type-code-letter-spacing);
+}
+
+/* Reduced motion: remove non-essential movement */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
