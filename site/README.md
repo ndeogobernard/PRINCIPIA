@@ -1,7 +1,9 @@
 # PRINCIPIA website
 
-A static website based on the fiberq.net mirror (`../www.fiberq.net.zip`), with the same pages, layout and assets, rebranded to PRINCIPIA.
-Open `index.html` in a browser, or serve the folder with any static host:
+A static website based on the fiberq.net mirror, with the same pages, layout and assets, rebranded to PRINCIPIA.
+Live site: https://ndeogobernard.github.io/PRINCIPIA/ (deployed automatically from `main` by `.github/workflows/pages.yml`).
+
+To preview locally, open `index.html` in a browser or run:
 
 ```bash
 python3 -m http.server -d site 8000
