@@ -1,4 +1,4 @@
-/* Design system Tailwind preset v2.0.0. Generated from tokens.json by scripts/build.mjs. Do not edit by hand.
+/* Design system Tailwind preset v1.0.0. Generated from tokens.json by scripts/build.mjs. Do not edit by hand.
    Usage (tailwind.config.js): module.exports = { presets: [require('./design-system/tailwind.preset.js')], content: [...] }
    Semantic colours (bg-canvas, text-primary, border-input, bg-action-primary-bg, ...) read CSS variables, so also load design-system/tokens.css. */
 module.exports = {
@@ -12,10 +12,9 @@ module.exports = {
       "transparent": "transparent",
       "current": "currentColor",
       "ink": {
-        "600": "#4b5563",
-        "900": "#0b1220"
+        "600": "#5f6575",
+        "900": "#23233c"
       },
-      "paper": "#f4f6f8",
       "slate": {
         "50": "#fafafb",
         "100": "#f4f6f9",
@@ -28,20 +27,31 @@ module.exports = {
         "700": "#43546a",
         "800": "#2e3d4f",
         "850": "#1f2a39",
-        "900": "#132237"
+        "900": "#132237",
+        "950": "#050f1e"
+      },
+      "gray": {
+        "100": "#f2f2f2"
       },
       "white": "#ffffff",
       "black": "#000000",
       "blue": {
         "50": "#eaf3ff",
-        "300": "#7aa7ff",
-        "600": "#2563eb",
-        "700": "#1d4ed8"
+        "400": "#4da0ff",
+        "500": "#0077ff",
+        "600": "#006fee",
+        "800": "#033098",
+        "850": "#003366",
+        "900": "#061e4d"
       },
       "green": {
         "50": "#e6fcf5",
         "300": "#34d399",
+        "400": "#00e89d",
         "700": "#00704a"
+      },
+      "teal": {
+        "600": "#00929d"
       },
       "red": {
         "50": "#fdecec",
@@ -57,7 +67,7 @@ module.exports = {
       "alpha": {
         "overlay": "#00000080",
         "shadow-1": "#0000000a",
-        "shadow-2": "#0b12201a",
+        "shadow-2": "#050f1e1a",
         "shadow-3": "#00000066"
       },
       "action-primary-bg": "var(--color-action-primary-bg)",
@@ -77,23 +87,11 @@ module.exports = {
       "status-error-fg-strong": "var(--color-status-error-fg-strong)",
       "status-error-bg": "var(--color-status-error-bg)",
       "status-info-fg": "var(--color-status-info-fg)",
-      "status-info-bg": "var(--color-status-info-bg)",
-      "logo-node": "var(--color-logo-node)",
-      "logo-ink": "var(--color-logo-ink)"
+      "status-info-bg": "var(--color-status-info-bg)"
     },
     "fontFamily": {
-      "display": [
-        "Space Grotesk",
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Segoe UI",
-        "Roboto",
-        "Helvetica Neue",
-        "Arial",
-        "sans-serif"
-      ],
       "sans": [
-        "Inter",
+        "DM Sans",
         "-apple-system",
         "BlinkMacSystemFont",
         "Segoe UI",
@@ -109,148 +107,149 @@ module.exports = {
         "SFMono-Regular",
         "Menlo",
         "Consolas",
+        "Roboto Mono",
         "monospace"
       ]
     },
     "fontWeight": {
       "regular": "400",
       "medium": "500",
-      "semibold": "600"
+      "bold": "700"
     },
     "fontSize": {
       "display": [
         "128px",
         {
           "lineHeight": "140.8px",
-          "letterSpacing": "-0.03em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "display-mobile": [
         "80px",
         {
           "lineHeight": "84px",
-          "letterSpacing": "-0.03em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "display-number": [
         "72px",
         {
           "lineHeight": "72px",
-          "letterSpacing": "-0.03em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.028em",
+          "fontWeight": "400"
         }
       ],
       "display-number-mobile": [
         "72px",
         {
           "lineHeight": "72px",
-          "letterSpacing": "-0.03em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.028em",
+          "fontWeight": "400"
         }
       ],
       "h1": [
         "63px",
         {
           "lineHeight": "63px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h1-mobile": [
         "45px",
         {
           "lineHeight": "45px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h2": [
         "50px",
         {
           "lineHeight": "55px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.05em",
+          "fontWeight": "400"
         }
       ],
       "h2-mobile": [
         "31px",
         {
           "lineHeight": "34.1px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.05em",
+          "fontWeight": "400"
         }
       ],
       "h3": [
         "40px",
         {
           "lineHeight": "48px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h3-mobile": [
         "30px",
         {
           "lineHeight": "36px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h4": [
         "30px",
         {
           "lineHeight": "31.5px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h4-mobile": [
         "30px",
         {
           "lineHeight": "31.5px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h5": [
         "24px",
         {
           "lineHeight": "26.4px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h5-mobile": [
         "24px",
         {
           "lineHeight": "26.4px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "h6": [
         "18px",
         {
           "lineHeight": "19.8px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.05em",
+          "fontWeight": "400"
         }
       ],
       "h6-mobile": [
         "18px",
         {
           "lineHeight": "19.8px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.05em",
+          "fontWeight": "400"
         }
       ],
       "body-l": [
         "24px",
         {
           "lineHeight": "36px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.04em",
           "fontWeight": "400"
         }
       ],
@@ -258,7 +257,7 @@ module.exports = {
         "20px",
         {
           "lineHeight": "28px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.04em",
           "fontWeight": "400"
         }
       ],
@@ -266,7 +265,7 @@ module.exports = {
         "16px",
         {
           "lineHeight": "24px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
         }
       ],
@@ -274,7 +273,7 @@ module.exports = {
         "16px",
         {
           "lineHeight": "24px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
         }
       ],
@@ -282,7 +281,7 @@ module.exports = {
         "14px",
         {
           "lineHeight": "21px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
         }
       ],
@@ -290,7 +289,7 @@ module.exports = {
         "14px",
         {
           "lineHeight": "21px",
-          "letterSpacing": "-0.01em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
         }
       ],
@@ -298,7 +297,7 @@ module.exports = {
         "12px",
         {
           "lineHeight": "13.2px",
-          "letterSpacing": "0em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
         }
       ],
@@ -306,31 +305,15 @@ module.exports = {
         "12px",
         {
           "lineHeight": "13.2px",
-          "letterSpacing": "0em",
+          "letterSpacing": "-0.02em",
           "fontWeight": "400"
-        }
-      ],
-      "eyebrow": [
-        "12px",
-        {
-          "lineHeight": "18px",
-          "letterSpacing": "0.14em",
-          "fontWeight": "600"
-        }
-      ],
-      "eyebrow-mobile": [
-        "12px",
-        {
-          "lineHeight": "18px",
-          "letterSpacing": "0.14em",
-          "fontWeight": "600"
         }
       ],
       "label": [
         "12px",
         {
           "lineHeight": "18px",
-          "letterSpacing": "0.14em",
+          "letterSpacing": "0.1em",
           "fontWeight": "500"
         }
       ],
@@ -338,7 +321,7 @@ module.exports = {
         "12px",
         {
           "lineHeight": "18px",
-          "letterSpacing": "0.14em",
+          "letterSpacing": "0.1em",
           "fontWeight": "500"
         }
       ],
@@ -346,56 +329,56 @@ module.exports = {
         "16px",
         {
           "lineHeight": "28px",
-          "letterSpacing": "0.14em",
-          "fontWeight": "500"
+          "letterSpacing": "0.125em",
+          "fontWeight": "400"
         }
       ],
       "label-l-mobile": [
         "16px",
         {
           "lineHeight": "28px",
-          "letterSpacing": "0.14em",
-          "fontWeight": "500"
+          "letterSpacing": "0.125em",
+          "fontWeight": "400"
         }
       ],
       "button": [
         "16px",
         {
           "lineHeight": "24px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "500"
+          "letterSpacing": "-0.02em",
+          "fontWeight": "400"
         }
       ],
       "button-mobile": [
         "16px",
         {
           "lineHeight": "24px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "500"
+          "letterSpacing": "-0.02em",
+          "fontWeight": "400"
         }
       ],
       "button-l": [
         "24px",
         {
           "lineHeight": "26.4px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "button-l-mobile": [
         "24px",
         {
           "lineHeight": "26.4px",
-          "letterSpacing": "-0.01em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.04em",
+          "fontWeight": "400"
         }
       ],
       "nav-mobile-mobile": [
         "40px",
         {
           "lineHeight": "46px",
-          "letterSpacing": "-0.02em",
-          "fontWeight": "600"
+          "letterSpacing": "-0.008em",
+          "fontWeight": "400"
         }
       ],
       "code": [
@@ -459,7 +442,7 @@ module.exports = {
     "boxShadow": {
       "0": "none",
       "1": "0px 1px 3px 0px #0000000a",
-      "2": "0px 4px 12px 0px #0b12201a",
+      "2": "0px 4px 12px 0px #050f1e1a",
       "3": "0px 4px 16px 0px #00000066"
     },
     "opacity": {
