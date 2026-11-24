@@ -42,4 +42,19 @@ python3 -m http.server -d site 8000
 - Connect the newsletter signup to a mailing service.
 - Add publications to the Research page and guides to Documentation.
 - Have the Privacy Policy reviewed.
-- Replace the Reddit social icon in the footer, or remove it.
+
+## Files kept for repurposing
+
+These came from the original site. No page links to them yet; they are kept so they can be reworked for PRINCIPIA and linked again.
+
+| What | Where |
+|---|---|
+| Product screenshots (map, schematic, splice manager, manhole editor) | `site/wp-content/uploads/2026/08/principia-designer-*.webp` |
+| CAD feature images (ribbon, schematic, cabinet splitter, bill of materials, loss budget, element data) | `site/wp-content/uploads/2026/08/1-ribbon*.png` to `6-element-data*.png` |
+| Screenshots (project, preview map, screen capture) | `site/wp-content/uploads/2025/12/` |
+| Contributor certificate | `site/wp-content/uploads/2025/12/principia_contributor_certificate_*` |
+| PDF guides (help, validation, interchange format, schema, versioning, workflow, user guides) | `site/wp-content/uploads/2026/01` to `2026/11` |
+| QA-test reports | `site/wp-content/uploads/2026/11/principia-1.6.0-QA-Tests-*.html` |
+| Add-in download package | `site/download/principia-addin.zip` |
+
+Their contents still show the original FiberQ material until they are reworked.
